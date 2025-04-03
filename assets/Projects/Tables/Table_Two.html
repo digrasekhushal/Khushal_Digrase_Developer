@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Bill</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .bill-container {
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .head-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .shop-info,
+        .bill-info {
+            margin-bottom: 20px;
+        }
+
+        .shop-info span,
+        .bill-info span {
+            display: block;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table th,
+        table td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .total {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            font-size: 0.9em;
+            margin-top: 20px;
+        }
+
+        .footer-sign,
+        .footer-grattings {
+            width: 45%;
+        }
+
+        .footer-sign p {
+            border-top: 1px solid #000;
+            width: 200px;
+            margin: 0 auto;
+            padding-top: 10px;
+            text-align: center;
+        }
+
+        .footer-grattings p {
+            text-align: right;
+            margin-right: 10px;
+        }
+
+        .footer-grattings p:first-child {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bill-container">
+        <h1>General Store</h1>
+        <div class="head-container">
+            <div class="shop-info">
+                <span>Address: 123 Katol, Nagpur, India</span>
+                <span>Phone: 9876543210</span>
+                <span>Email: generalstore@gmail.com</span>
+            </div>
+
+            <div class="bill-info">
+                <span>Bill Number: #000123</span>
+                <span>Date: 2024-09-22</span>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cello Gripper Pen</td>
+                    <td>$10.00</td>
+                    <td>2</td>
+                    <td>$20.00</td>
+                </tr>
+                <tr>
+                    <td>Apsara Pencil</td>
+                    <td>$10.00</td>
+                    <td>1</td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td>Camlin Scale</td>
+                    <td>$10.00</td>
+                    <td>2</td>
+                    <td>$20.00</td>
+                </tr>
+                <tr>
+                    <td>Classmate Notebook</td>
+                    <td>$10.00</td>
+                    <td>1</td>
+                    <td>$10.00</td>
+                </tr>
+                <tr>
+                    <td>Classmate Pen</td>
+                    <td>$5.00</td>
+                    <td>1</td>
+                    <td>$5.00</td>
+                </tr>
+                <tr>
+                    <td>Classmate Pencil</td>
+                    <td>$5.00</td>
+                    <td>1</td>
+                    <td>$5.00</td>
+                </tr>
+                <tr>
+                    <td>Classmate Eraser</td>
+                    <td>$5.00</td>
+                    <td>1</td>
+                    <td>$5.00</td>
+                </tr>
+                <tr>
+                    <td>Apsara Scale</td>
+                    <td>$5.00</td>
+                    <td>1</td>
+                    <td>$5.00</td>
+                </tr>
+                <tr>
+                    <td>Apsara Eraser</td>
+                    <td>$5.00</td>
+                    <td>1</td>
+                    <td>$5.00</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="total">Subtotal</td>
+                    <td>$85.00</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="total">Tax (5%)</td>
+                    <td>$4.25</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="total">Total Amount</td>
+                    <td>$89.25</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <div class="footer-sign">
+                <p>Customer Sign</p>
+            </div>
+            <div class="footer-grattings">
+                <p>Thank you for shopping with us!</p>
+                <p>Visit again!</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

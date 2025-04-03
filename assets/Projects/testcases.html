@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Projects</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 15px;
+            background: linear-gradient(90deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%);
+            color: white;
+        }
+
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .project-box {
+            background: white;
+            border-radius: 5px;
+            margin: 15px;
+            padding: 10px;
+            text-align: center;
+            transition: box-shadow 0.3s;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            /* Remove underline from links */
+            color: inherit;
+            /* Inherit text color */
+        }
+
+        .project-box img {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+        .project-box h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .project-box:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            height: 50px;
+            /* Fixed height for footer */
+            background-color: #333;
+            color: white;
+            /* White text color */
+            text-align: center;
+            padding: 15px;
+            /* Padding for footer */
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="javascript:history.back()" class="back-button"> Back</a>
+        <h1>Manual Test Cases Projects</h1>
+        <p>A collection of projects I have created using by <b>Manual Test Cases</b>...</p>
+    </header>
+
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+        <div class="projects"> <!-- Project boxes -->
+            <a href="https://docs.google.com/spreadsheets/d/17dLld9WlJcKHQ1O4pqB7lwM9iysLsVYc4MzJ1i_wpmM/edit?gid=0#gid=0" class="project-box"> <!-- Link to HTML project page -->
+                <img src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png" alt="HTML">
+                <h3>YouTube</h3>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1z7HVWrF7_Jc3u6qAIMxR8gsPhBiV_n8tPMh38J0W4YA/edit?gid=0#gid=0" class="project-box"> <!-- Link to HTML project page -->
+                <img src="https://st3.depositphotos.com/1102480/12714/i/950/depositphotos_127149876-stock-illustration-new-instagram-icon-printed-on.jpg" alt="HTML">
+                <h3>Instagram</h3>
+            </a>
+            <a href="https://docs.google.com/spreadsheets/d/1qMWEgIP6AgOF56EIWdlznVKgZyOGhQyYOVmD4ro5gY0/edit?gid=0#gid=0" class="project-box"> <!-- Link to HTML project page -->
+                <img src="https://i.pinimg.com/736x/2b/e5/21/2be521c9d6772bab3c9c7ef8c2645f5e.jpg" alt="HTML">
+                <h3>SnapChats</h3>
+            </a>
+            <a href="./Soon-Page.html" class="project-box"> <!-- Link to HTML project page -->
+                <img src="https://cdn-icons-png.flaticon.com/512/8422/8422370.png" alt="HTML">
+                <h3>Laptop Bags</h3>
+            </a>
+            <a href="./Soon-Page.html" class="project-box"> <!-- Link to HTML project page -->
+                <img src="https://cdn-icons-png.flaticon.com/512/8422/8422370.png" alt="HTML">
+                <h3>White boards</h3>
+            </a>
+            <a href="./Soon-Page.html" class="project-box"> <!-- Link to HTML project page -->
+                <img src="https://cdn-icons-png.flaticon.com/512/8422/8422370.png" alt="HTML">
+                <h3>Sport Bike</h3>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Manual Test Cases</p>
+    </footer>
+
+</body>
+
+</html>
