@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Showcase</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 100px 20px;
+            margin: 0;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .display {
+            background-color: #e9ecef;
+            padding: 100px 0;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 26px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        button {
+            flex: 0 0 48%;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 22px 0;
+            margin: 10px 0;
+            background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);
+        }
+
+        .code-section {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 14px;
+            max-height: 100%;
+        }
+
+        .code-section code {
+            white-space: pre-wrap;
+            word-break: break-word;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            input[type="text"] {
+                width: 100%;
+            }
+
+            .button-group {
+                gap: 10px;
+            }
+
+            button {
+                flex: 1 1 48%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- JavaScript Calculator -->
+        <div class="js-container">
+            <div class="main">
+                <div class="container">
+                    <div class="display" id="display">Result</div>
+                    <input type="number" id="numInput1" placeholder="Enter number one" />
+                    <input type="number" id="numInput2" placeholder="Enter number two" />
+                    <div class="button-group">
+                        <button onclick="add()">+</button>
+                        <button onclick="sub()">-</button>
+                        <button onclick="mult()">*</button>
+                        <button onclick="div()">/</button>
+                    </div>
+                </div>
+                <div class="code-section">
+                    <code>
+/* JavaScript Calculator Functions */
+function add() {
+  let x = document.getElementById('numInput1').value;
+  let y = document.getElementById('numInput2').value;
+  let z = Number(x) + Number(y);
+  document.getElementById('display').innerHTML = z;
+}
+
+function sub() {
+  let x = document.getElementById('numInput1').value;
+  let y = document.getElementById('numInput2').value;
+  let z = Number(x) - Number(y);
+  document.getElementById('display').innerHTML = z;
+}
+
+function mult() {
+  let x = document.getElementById('numInput1').value;
+  let y = document.getElementById('numInput2').value;
+  let z = Number(x) * Number(y);
+  document.getElementById('display').innerHTML = z;
+}
+
+function div() {
+  let x = document.getElementById('numInput1').value;
+  let y = document.getElementById('numInput2').value;
+  let z = Number(x) / Number(y);
+  document.getElementById('display').innerHTML = z;
+}
+          </code>
+                </div>
+            </div>
+        </div>
+
+        <!-- C Language Example -->
+        <div class="clang-container">
+            <div class="main">
+                <div class="container">
+                    <img src="../assets/image/c-lang-code.png" alt="C Language Calculator Code Screenshot"
+                        style="max-width:100%; border-radius:8px;" />
+                </div>
+                <div class="code-section">
+                    <code>
+/* C Language Calculator Functions */
+#include <&lt;stdio.h&gt;>
+
+int main() {
+  int num1, num2, result;
+  char operator;
+
+  printf("Enter first number: ");
+  scanf("%d", &num1);
+
+  printf("Enter second number: ");
+  scanf("%d", &num2);
+
+  printf("Enter operator (+, -, *, /): ");
+  scanf(" %c", &operator);
+
+  if (operator == '+') {
+    result = num1 + num2;
+    printf("Result: %d\n", result);
+  } else if (operator == '-') {
+    result = num1 - num2;
+    printf("Result: %d\n", result);
+  } else if (operator == '*') {
+    result = num1 * num2;
+    printf("Result: %d\n", result);
+  } else if (operator == '/') {
+    if (num2 != 0) {
+      result = num1 / num2;
+      printf("Result: %d\n", result);
+    } else {
+      printf("Error: Division by zero\n");
+    }
+  } else {
+    printf("Invalid operator\n");
+  }
+
+  return 0;
+}
+          </code>
+                </div>
+            </div>
+        </div>
+
+        <div class="java-container">
+            <div class="main">
+                <div class="container">
+                    <img src="../assets/image/java-lang.png" alt="Java Calculator Code Screenshot"
+                        style="max-width:100%; border-radius:8px;" />
+                </div>
+                <div class="code-section">
+                    <code>
+/* Java Language Calculator Functions */
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter first number: ");
+    int a = sc.nextInt();
+    System.out.print("Enter second number: ");
+    int b = sc.nextInt();
+    System.out.print("Enter operator (+, -, *, /): ");
+    char op = sc.next().charAt(0);
+    int result;
+                        
+    if (op == '+')
+        result = a + b;
+    else if (op == '-')
+        result = a - b;
+    else if (op == '*')
+        result = a * b;
+    else if (op == '/') {
+    if (b != 0)
+    result = a / b;
+    else {
+        System.out.println("Error: Division by zero");
+    return;
+    }
+    } else {
+        System.out.println("Invalid operator");
+    return;
+    }
+                        
+        System.out.println("Result: " + result);
+    }
+}
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="python-container">
+            <div class="main">
+                <div class="container">
+                    <img src="../assets/image/python-lang.png" alt="Python Calculator Code Screenshot"
+                        style="max-width:100%; border-radius:8px;" />
+                </div>
+                <div class="code-section">
+                    <code>
+# Python Language Calculator Functions
+def add(x, y):
+    return x + y
+
+def subtract(x, y):
+    return x - y
+
+def multiply(x, y):
+    return x * y
+
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "Error: Division by zero"
+
+# Main program
+if __name__ == "__main__":
+    print("Welcome to Simple Calculator")
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
+    operator = input("Choose operation (+, -, *, /): ")
+
+    if operator == '+':
+        result = add(num1, num2)
+    elif operator == '-':
+        result = subtract(num1, num2)
+    elif operator == '*':
+        result = multiply(num1, num2)
+    elif operator == '/':
+        result = divide(num1, num2)
+    else:
+        result = "Invalid operator"
+
+    print("Result:", result)
+    </code>
+                </div>
+            </div>
+            <div class="swift-container">
+            </div>
+        </div>
+
+        <script>
+            // JavaScript Calculator Functions
+            function add() {
+                let x = document.getElementById('numInput1').value;
+                let y = document.getElementById('numInput2').value;
+                let z = Number(x) + Number(y);
+                document.getElementById('display').innerHTML = z;
+            }
+
+            function sub() {
+                let x = document.getElementById('numInput1').value;
+                let y = document.getElementById('numInput2').value;
+                let z = Number(x) - Number(y);
+                document.getElementById('display').innerHTML = z;
+            }
+
+            function mult() {
+                let x = document.getElementById('numInput1').value;
+                let y = document.getElementById('numInput2').value;
+                let z = Number(x) * Number(y);
+                document.getElementById('display').innerHTML = z;
+            }
+
+            function div() {
+                let x = document.getElementById('numInput1').value;
+                let y = document.getElementById('numInput2').value;
+                let z = Number(x) / Number(y);
+                document.getElementById('display').innerHTML = z;
+            }
+        </script>
+</body>
+
+</html>
