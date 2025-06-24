@@ -1,295 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio by HTML CSS</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link rel="icon" href="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Html-512.png" type="x-icon" />
+    <!-- This is the link of Font-awesome used for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- This is the link of Google Fonts used for styling -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- This is the link of Icons  -->
+    <link
+      rel="icon"
+      href="https://cdn3.iconfinder.com/data/icons/luchesa-vol-9/128/Html-512.png"
+      type="x-icon"
+    />
+    <!-- This is the link of CSS file -->
     <link rel="stylesheet" href="./assets/Css/style.css" />
-</head>
+  </head>
 
-<body>
-    <nav class="navbar">
-        <div class="logo-container">
-            <i class="fas fa-laptop-code"></i>
-            <span class="logo-text">Ｋｈｕｓｈａｌ</span>
+  <body>
+    <!-- Header Section Start -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">Khushal <span>Portfolio</span></div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <i class="fas fa-bars-staggered"></i>
         </div>
-        <div class="navbar-links">
-            <a href="#Home">Home</a>
-            <a href="#About">About</a>
-            <a href="#Services">Services</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Contact">Contact</a>
+        <ul class="nav-links">
+          <li><a href="#Home" class="active">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Services">Services</a></li>
+          <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Home Section Start -->
+    <section class="intro" id="Home">
+      <div class="text-container">
+        <h1><span class="highlight">Khushal Digrase</span></h1>
+        <p>I'm <span class="typed"></span></p>
+        <br />
+        <kbd
+          >I'm a passionate Full Stack Developer and UI/UX Designer with
+          expertise in HTML, CSS, JavaScript, React, SQL, and Node.js, committed
+          to building responsive, innovative, and user-friendly digital
+          products.</kbd
+        ><br /><br />
+        <div class="buttons">
+          <a href="#Projects" class="btn primary">View My Work</a>
+          <a href="#Contact" class="btn secondary">Let's Connect</a>
         </div>
-        <!-- Hamburger Icon -->
-        <div class="hamburger-menu" id="hamburger-menu">
-            <i class="fas fa-bars-staggered"></i>
+      </div>
+      <!-- Home page photo here -->
+      <img
+        class="intro-image"
+        src="https://png.pngtree.com/png-vector/20240205/ourmid/pngtree-man-developer-with-laptop-png-image_11623644.png"
+        alt="Full Stack Developer"
+      />
+    </section>
+    <!-- Home Section End -->
+
+    <!-- About Section Start -->
+    <section class="about-section" id="About">
+      <h1>Who Am I ?</h1>
+      <div class="about-container">
+        <div class="about-photo">
+          <!-- about photo here -->
+          <img
+            src="https://png.pngtree.com/png-vector/20240205/ourmid/pngtree-man-developer-with-laptop-png-image_11623644.png"
+            alt="Profile"
+          />
+          <!-- Resume button here -->
+          <a href="./assets/Resumes/Resume.html" class="resume-float" download>
+            <i class="fas fa-file-download"></i> Resume
+          </a>
         </div>
-    </nav>
 
-    <!-- Home Section -->
-    <div class="intro" id="Home">
-        <div class="text-container">
-            <h1><span class="highlight">Khushal Digrase</span></h1>
-            <p>I'm <span class="typed"></span></p>
+        <div class="about-content">
+          <h1>Hi, I’m Khushal Digrase</h1>
+          <h2>Full Stack Developer & UI/UX Visionary</h2>
+          <p>
+            I craft seamless digital experiences through code and creativity.
+            From front-end animations to robust backends, I build products that
+            <strong>work beautifully</strong> and scale smartly.
+          </p>
+          <p>
+            Passionate about pushing the boundaries of web interaction, I turn
+            bold ideas into pixel-perfect, high-performance experiences. Let’s
+            engineer the future — uniquely.
+          </p>
+          <!-- About Box start -->
+          <div class="about-box">
+            <!-- About items -->
+            <div class="about-item">Full Stack Web Development</div>
+            <div class="about-item">UI/UX Design Strategy</div>
+            <div class="about-item">Front-End Engineering (React)</div>
+            <div class="about-item">Back-End (Node, Express)</div>
+            <div class="about-item">RESTful APIs & Auth Systems</div>
+            <div class="about-item">Database Design (MongoDB, SQL)</div>
+            <div class="about-item">Project Planning & Agile</div>
+            <div class="about-item">Testing & Debugging</div>
+          </div>
+          <!-- About Box End -->
         </div>
-        <img class="intro-image"
-            src="https://png.pngtree.com/png-clipart/20231109/original/pngtree-programmer-it-developer-png-image_13520483.png"
-            alt="Full Stack Developer" />
-    </div>
+      </div>
 
-    <!-- script for typed effect -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const options = {
-                strings: ["UI/UX Designer", "Full-Stack Developer", "Mobile Developer", "Freelancer"],
-                typeSpeed: 50,
-                backSpeed: 30,
-                backDelay: 1000,
-                startDelay: 500,
-                loop: true,
-                showCursor: false
-            };
-            const typed = new Typed(".typed", options);
-        });
-    </script>
-
-
-    <!-- About & Skills Section -->
-    <div class="about-section" id="About">
-        <h1>About Me</h1>
-        <div class="about">
-            <div class="left-box">
-                <div class="profile">
-                    <img src="./assets/Projects/assets/image/PassPort.jpg"
-                        alt="Profile Picture" />
-                </div>
-                <div class="details">
-                    <h2>Full Stack Developer</h2>
-                    <ul>
-                        <li><strong>Name: </strong>Khushal Digrase</li>
-                        <li><strong>Age: </strong>19</li>
-                        <li><strong>Location: </strong>Katol, India</li>
-                        <li><strong>Phone: </strong>+91 83******26</li>
-                        <li><strong>Email: </strong>digrasekhushal32@gmail.com</li>
-                    </ul>
-                    <!-- Download CV Button -->
-                    <a href="./assets/Resumes/Resume.html" download="Full_Stack_Developer_CV" class="btn-download">
-                        <button><i class="fas fa-download"></i> Download CV</button>
-                    </a>
-                </div>
-            </div>
-
-            <div class="right-box">
-                <div class="summary">
-                    <h2>Hey, I'm Khushal Digrase</h2><br>
-                    <p>I am a passionate Full Stack Developer and UI/UX Designer with expertise in HTML, CSS,
-                        JavaScript, React, Vue.js, SQL, and Node.js, committed to building responsive, innovative, and
-                        user-friendly digital products.</p>
-
-                </div>
-                <div class="skills-box">
-                    <div class="skills">
-                        <h2>Front-End Skills</h2>
-                        <ul>
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>JavaScript</li>
-                            <li>React</li>
-                        </ul>
-                    </div>
-                    <div class="skills">
-                        <h2>Back-End Skills</h2>
-                        <ul>
-                            <li>Node.js</li>
-                            <li>SQL</li>
-                            <li>C</li>
-                            <li>Python</li>
-                            <li>Java</li>
-                        </ul>
-                    </div>
-                    <div class="tools">
-                        <h2>Tools</h2>
-                        <ul>
-                            <li>VS Code</li>
-                            <li>X Code</li>
-                            <li>Android Studio</li>
-                            <li>pgAdmin 4</li>
-                            <li>Postman</li>
-                            <li>Adobe XD</li>
-                            <li>Photoshop</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      <!-- Education, Skills, and Experience Section -->
+      <div class="timeline-section">
+        <div class="tab-buttons">
+          <button class="tab active" onclick="showTab(event, 'personal')">
+            <i class="fas fa-user"></i> Personal
+          </button>
+          <button class="tab" onclick="showTab(event, 'education')">
+            <i class="fas fa-graduation-cap"></i> Education
+          </button>
+          <button class="tab" onclick="showTab(event, 'skills')">
+            <i class="fas fa-tools"></i> Skills
+          </button>
+          <button class="tab" onclick="showTab(event, 'experience')">
+            <i class="fas fa-briefcase"></i> Experience
+          </button>
         </div>
-    </div>
 
-
-    <!-- Services Section -->
-    <div class="services" id="Services">
-        <h1>What I Offers.</h1>
-        <div class="service-boxes">
-            <div class="service-box">
-                <i class="fas fa-code"></i>
-                <h2>Web Development</h2>
+        <!-- Personal - details Tab -->
+        <div class="tab-content active" id="personal">
+          <div class="personal-info">
+            <div class="info-grid">
+              <div class="info-item">
+                <strong>Full Name:</strong> Khushal Sanjay Digrase
+              </div>
+              <div class="info-item">
+                <strong>Location:</strong> Katol, Nagpur, India
+              </div>
+              <div class="info-item">
+                <strong>Email:</strong> digrasekhushal32@gmail.com
+              </div>
+              <div class="info-item">
+                <strong>Phone:</strong> +91-8379924026
+              </div>
+              <div class="info-item">
+                <strong>Languages:</strong> English, Hindi, Marathi
+              </div>
+              <div class="info-item">
+                <strong>Hobbies:</strong> UI Design, Coding, Exploring Tech
+              </div>
             </div>
-            <div class="service-box">
-                <i class="fas fa-mobile-alt"></i>
-                <h2>App Development</h2>
-            </div>
-            <div class="service-box">
-                <i class="fas fa-palette"></i>
-                <h2>UI/UX Design</h2>
-            </div>
-            <div class="service-box">
-                <i class="fas fa-pencil-ruler"></i>
-                <h2>Responsive Design</h2>
-            </div>
+          </div>
         </div>
-    </div>
 
-
-
-    <!-- Projects Section -->
-    <div class="projects" id="Projects">
-        <h1>What I've Built</h1>
-        <div class="project-boxes">
-            <a href="./assets/Projects/Project_Html.html" class="project-box">
-                <i class="fab fa-html5"></i>
-                <h2>HTML Project</h2>
-                <p>Explore my HTML project that showcases web page structure and responsive design.</p>
-            </a>
-            <a href="./assets/Projects/Project_Css.html" class="project-box">
-                <i class="fab fa-css3-alt"></i>
-                <h2>CSS Project</h2>
-                <p>Discover CSS-driven designs that enhance the styling and visuals of websites.</p>
-            </a>
-            <a href="./assets/Projects/Project_JavaScript.html" class="project-box">
-                <i class="fab fa-js-square"></i>
-                <h2>JavaScript Project</h2>
-                <p>Experience interactive web pages with JavaScript-driven functionality.</p>
-            </a>
-            </a>
-            <a href="./assets/Projects/Project_Bootstrap.html" class="project-box">
-                <i class="fab fa-bootstrap"></i>
-                <h2>Bootstrap Project</h2>
-                <p>Check out my responsive projects built with Bootstrap for clean, mobile-first designs.</p>
-            </a>
-            <a href="./assets/Projects/Project_TestCases.html" class="project-box">
-                <i class="fas fa-clipboard-check"></i>
-                <h2>Test Cases</h2>
-                <p>Testing the functionality of various projects through well-structured test cases.</p>
-            </a>
-            <a href="https://idyllic-croissant-79c54a.netlify.app/" class="project-box">
-                <i class="fab fa-react"></i>
-                <h2>React JS Project</h2>
-                <p>Building dynamic user interfaces with React, showcasing modern JavaScript features.</p>
-            </a>
-            <a href="./assets/Projects/Practice_Page.html" class="project-box">
-                <i class="fas fa-tasks"></i>
-                <h2>Practice Projects</h2>
-                <p>Explore my practice projects that demonstrate my learning journey in web development.</p>
-            </a>
-            <a href="#" class="project-box">
-                <i class="fab fa-node"></i>
-                <h2>Node JS Project</h2>
-                <p>Explore my Node.js projects that demonstrate server-side JavaScript development.</p>
-            </a>
-            <a href="#" class="project-box">
-                <i class="fas fa-database"></i>
-                <h2>SQL Project</h2>
-                <p>Discover my SQL projects that showcase database management and query optimization.</p>
-            </a>
+        <!-- Education - details Tab -->
+        <div class="tab-content" id="education">
+          <div class="timeline-item">
+            <div class="year">2015 - 2021</div>
+            <div class="details">
+              <h3>HSC</h3>
+              <p>Benarasidas Ruiya High School Katol — Science.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2021 - 2023</div>
+            <div class="details">
+              <h3>SSC</h3>
+              <p>JVM Science Devgram — Science (PCM), Computer Science.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2023 - Current</div>
+            <div class="details">
+              <h3>B-Tech</h3>
+              <p>GNIT Nagpur — Computer Science and Engineering (DS).</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2024 - Current</div>
+            <div class="details">
+              <h3>Full-Stack Development</h3>
+              Enjoy Programming Katol - Full-Stack Development.
+            </div>
+          </div>
         </div>
-    </div>
 
-
-    <!-- Contact Section -->
-    <div class="contact" id="Contact">
-        <h2>Get In Touch</h2>
-        <div class="contact-info">
-            <!-- Contact Info Layout (4 boxes) -->
-            <div class="contact-row">
-                <!-- Contact Info Box 1: Email -->
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h3>Email</h3>
-                        <p><a href="mailto:digrasekhushal32@gmail.com">digrasekhushal32@gmail.com</a></p>
-                    </div>
-                </div>
-
-                <!-- Contact Info Box 2: Phone -->
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h3>Phone</h3>
-                        <p><a href="tel:+918379924026">+91 83******26</a></p>
-                    </div>
-                </div>
-
-                <!-- Contact Info Box 3: Location -->
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h3>Location</h3>
-                        <p><a href="https://maps.app.goo.gl/Tq2c2EP6QmWykZ579">Katol, Maharashtra, India</a></p>
-                    </div>
-                </div>
-
-                <!-- Contact Info Box 4: Social Icons -->
-                <div class="contact-item">
-                    <i class="fas fa-share-alt"></i>
-                    <div>
-                        <h3>Follow Us</h3>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/khushal-digrase-86a027278/" class="social-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" class="social-icon">
-                                <i class="fab fa-skype"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Skills - details Tab -->
+        <div class="tab-content" id="skills">
+          <div class="skills-grid">
+            <div class="skill-card">
+              <i class="fas fa-code"></i>HTML, CSS, JavaScript
             </div>
-
-            <!-- Contact Form -->
-            <div class="contact-form">
-                <h3>Contact Form</h3>
-                <form action="">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
+            <div class="skill-card">
+              <i class="fab fa-react"></i>React & Redux
             </div>
+            <div class="skill-card">
+              <i class="fab fa-node-js"></i>Node.js & Express
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-database"></i>MongoDB & SQL
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-pencil-ruler"></i>UI/UX Design
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-mobile-alt"></i>Responsive Design
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-plug"></i>API Integration
+            </div>
+            <div class="skill-card">
+              <i class="fas fa-bug"></i>Testing & Debugging
+            </div>
+          </div>
         </div>
-        <script src="./assets/JS/script.js" async defer></script>
-        <!-- Footer Section -->
-        <footer>
-            <div class="container">
-                <p>&copy; 2025 Full-Stack Developer.</p>
-            </div>
-        </footer>
-</body>
 
+        <!-- Experience - details Tab -->
+        <div class="tab-content" id="experience">
+          <div class="timeline-item">
+            <div class="year">2024 - 2025</div>
+            <div class="details">
+              <h3>Junior Web Developer</h3>
+              <p>
+                Enjoy Programming — Built responsive websites with HTML/CSS/JS,
+                assisted in team-based frontend projects.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="year">2024 - 2025</div>
+            <div class="details">
+              <h3>Senior Full Stack Developer</h3>
+              <p>
+                Enjoy Programming — Led UI/UX design, optimized React
+                components, developed REST APIs and full-stack features.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Services Section Start -->
+    <section class="services" id="Services">
+      <h1>What I Offer.</h1>
+      <div class="service-boxes">
+        <div class="service-box">
+          <i class="fas fa-code"></i>
+          <h2>Web Development</h2>
+        </div>
+        <div class="service-box">
+          <i class="fas fa-mobile-alt"></i>
+          <h2>App Development</h2>
+        </div>
+        <div class="service-box">
+          <i class="fas fa-palette"></i>
+          <h2>UI/UX Design</h2>
+        </div>
+        <div class="service-box">
+          <i class="fas fa-pencil-ruler"></i>
+          <h2>Responsive Design</h2>
+        </div>
+        <div class="service-box">
+          <i class="fas fa-cloud"></i>
+          <h2>Cloud Deployment</h2>
+        </div>
+        <div class="service-box">
+          <i class="fas fa-cogs"></i>
+          <h2>API Integration</h2>
+        </div>
+        <div class="service-box">
+          <i class="fas fa-brain"></i>
+          <h2>AI/ML Solutions</h2>
+        </div>
+        <div class="service-box">
+          <i class="fas fa-database"></i>
+          <h2>Database Management</h2>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+
+    <!-- Projects Section Start -->
+    <section class="projects" id="Projects">
+      <h1 class="section-title">What I've Built?</h1>
+
+      <div class="tab-buttons">
+        <button class="tab active" onclick="filterProjects('all', this)">
+          <i class="fas fa-th-large"></i> All
+        </button>
+        <button class="tab" onclick="filterProjects('html', this)">
+          <i class="fab fa-html5"></i> HTML
+        </button>
+        <button class="tab" onclick="filterProjects('css', this)">
+          <i class="fab fa-css3-alt"></i> CSS
+        </button>
+        <button class="tab" onclick="filterProjects('js', this)">
+          <i class="fab fa-js-square"></i> JavaScript
+        </button>
+      </div>
+      <div class="tab-buttons">
+        <button class="tab" onclick="filterProjects('react', this)">
+          <i class="fab fa-react"></i> React
+        </button>
+
+        <button class="tab" onclick="filterProjects('bootstrap', this)">
+          <i class="fab fa-bootstrap"></i> Bootstrap
+        </button>
+
+        <!-- <button class="tab" onclick="filterProjects('vue', this)">
+          <i class="fab fa-vuejs"></i> Vue
+        </button>
+
+        <button class="tab" onclick="filterProjects('node', this)">
+          <i class="fab fa-node-js"></i> Node
+        </button>
+        <button class="tab" onclick="filterProjects('sql', this)">
+          <i class="fas fa-database"></i> SQL
+        </button> -->
+        <button class="tab" onclick="filterProjects('testcases', this)">
+          <i class="fas fa-clipboard-check"></i> Test Cases
+        </button>
+        <button class="tab" onclick="filterProjects('design', this)">
+          <i class="fas fa-pencil-ruler"></i> Design
+        </button>
+      </div>
+
+      <!-- Project Cards Start -->
+      <div class="project-boxes">
+        <!-- HTML Project Card -->
+        <a href="./assets/Projects/Project_Html.html" class="project-box html">
+          <i class="fab fa-html5"></i>
+          <h2>HTML Project</h2>
+          <p>
+            Explore my HTML project with clean structure and responsive layout.
+          </p>
+        </a>
+
+        <!-- CSS Project Card -->
+        <a href="./assets/Projects/Project_Css.html" class="project-box css">
+          <i class="fab fa-css3-alt"></i>
+          <h2>CSS Project</h2>
+          <p>Discover advanced styling and layout techniques using CSS/SCSS.</p>
+        </a>
+
+        <!-- JavaScript Project Card -->
+        <a
+          href="./assets/Projects/Project_JavaScript.html"
+          class="project-box js"
+        >
+          <i class="fab fa-js-square"></i>
+          <h2>JavaScript Project</h2>
+          <p>Interactive pages powered by vanilla JavaScript logic.</p>
+        </a>
+
+        <!-- Bootstrap Project Card -->
+        <a
+          href="./assets/Projects/Project_Bootstrap.html"
+          class="project-box bootstrap"
+        >
+          <i class="fab fa-bootstrap"></i>
+          <h2>Bootstrap Project</h2>
+          <p>Mobile-first design using Bootstrap components and utilities.</p>
+        </a>
+
+        <!-- Test Cases Project Card -->
+        <a
+          href="./assets/Projects/Project_TestCases.html"
+          class="project-box testcases"
+        >
+          <i class="fas fa-clipboard-check"></i>
+          <h2>Test Cases</h2>
+          <p>Testing functionality with structured front-end test scenarios.</p>
+        </a>
+
+        <!-- React Project Card -->
+        <a
+          href="https://idyllic-croissant-79c54a.netlify.app/"
+          class="project-box react"
+        >
+          <i class="fab fa-react"></i>
+          <h2>React JS Project</h2>
+          <p>Modern single-page app showcasing dynamic UI via React.</p>
+        </a>
+
+        <!-- <a href="#" class="project-box vue">
+          <i class="fab fa-vuejs"></i>
+          <h2>Vue JS Project</h2>
+          <p>
+            Reactive front-end using Vue.js components and state management.
+          </p>
+        </a>
+
+        <a href="#" class="project-box node">
+          <i class="fab fa-node-js"></i>
+          <h2>Node JS Project</h2>
+          <p>
+            Server-side logic, APIs and backend logic using Node.js & Express.
+          </p>
+        </a>
+
+        <a href="#" class="project-box sql">
+          <i class="fas fa-database"></i>
+          <h2>SQL Project</h2>
+          <p>
+            Working with MySQL/PostgreSQL to store and query data efficiently.
+          </p>
+        </a> -->
+        <a href="./assets/Projects/Project_Design.html" class="project-box design">
+          <i class="fas fa-pencil-ruler"></i>
+          <h2>Design Project</h2>
+          <p>
+            Showcasing creative UI/UX designs using tools like Figma, Adobe XD,
+            and modern design systems.
+          </p>
+        </a>
+      </div>
+      <!-- Project Cards End -->
+    </section>
+    <!-- Project Section End -->
+    <!-- Contact Section Start -->
+    <section class="contact" id="Contact">
+      <h2>Get In Touch.</h2>
+      <div class="contact-info">
+        <div class="contact-row">
+          <!-- Contact Info Box 1: Email -->
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:digrasekhushal32@gmail.com"
+                  >digrasekhushal32@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Info Box 2: Phone -->
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h3>Phone</h3>
+              <p><a href="tel:+918379924026">+91 83******26</a></p>
+            </div>
+          </div>
+
+          <!-- Contact Info Box 3: Location -->
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h3>Location</h3>
+              <p>
+                <a href="https://maps.app.goo.gl/Tq2c2EP6QmWykZ579"
+                  >Katol, Maharashtra, India</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- Contact Info Box 4: Social Icons -->
+          <div class="contact-item">
+            <i class="fas fa-share-alt"></i>
+            <div>
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                <a
+                  href="https://wa.me/91XXXXXXXXXX"
+                  target="_blank"
+                  class="social-icon"
+                  title="Connect with me on WhatsApp"
+                >
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a href="https://x.com/?lang=en" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://github.com/" class="social-icon">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://teams.microsoft.com"
+                  class="social-icon"
+                  title="Microsoft Teams"
+                  target="_blank"
+                >
+                  <i class="fas fa-comments"></i>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/khushal-digrase-86a027278/"
+                  class="social-icon"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <h3>Contact Form</h3>
+          <form action="#">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="6"
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Section Start -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Full-Stack Developer. All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- This is the link of the script file -->
+    <script src="./assets/JS/script.js" async defer></script>
+  </body>
 </html>
