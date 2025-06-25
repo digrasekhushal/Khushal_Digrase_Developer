@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_License_one</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 8px;
+            display: block;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="checkbox"] {
+            width: calc(100% - 24px);
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #6a11cb;
+            color: white;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2575fc;
+        }
+
+        .message {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Drive Eligibility Checker</h1>
+        <label for="age">Your Age:</label>
+        <input type="text" id="age" placeholder="Enter your Age">
+        <label for="license">License Type:</label>
+        <input type="text" id="license" placeholder="Enter License Type (e.g., A, B, C)">
+        <label for="hasInsurance"><input type="checkbox" id="hasInsurance" checked>I have valid insurance</label>
+        <button id="checkButton">Check Eligibility</button>
+        <div class="message" id="message"></div>
+    </div>
+    <script>
+        document.getElementById('checkButton').addEventListener('click', function () {
+            const age = parseInt(document.getElementById('age').value);
+            const license = document.getElementById('license').value.trim().toUpperCase();
+            const hasInsurance = document.getElementById('hasInsurance').checked;
+            const message = document.getElementById('message');
+
+            if (isNaN(age) || age <= 0) {
+                message.textContent = 'Please enter a valid age.';
+                message.className = 'message invalid';
+                return;
+            }
+
+            if (!license) {
+                message.textContent = 'Please enter a valid license type.';
+                message.className = 'message invalid';
+                return;
+            }
+
+            if (age < 18) {
+                message.textContent = 'You must be at least 18 years old to drive.';
+                message.className = 'message invalid';
+            } else if (license === 'A' && hasInsurance) {
+                message.textContent = 'You are eligible to drive with License A.';
+                message.className = 'message valid';
+            } else if (license === 'B' && hasInsurance) {
+                message.textContent = 'You are eligible to drive with License B.';
+                message.className = 'message valid';
+            } else if (license === 'C' && hasInsurance) {
+                message.textContent = 'You are eligible to drive with License C.';
+                message.className = 'message valid';
+            } else {
+                message.textContent = 'You must have valid insurance to drive.';
+                message.className = 'message invalid';
+            }
+        });
+    </script>
+</body>
+
+</html>

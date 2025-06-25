@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple JS Calculator UI</title>
+    <style>
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 100px 20px;
+            margin: 0;
+        }
+
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .display {
+            background-color: #e9ecef;
+            padding: 100px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            font-size: 26px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        button {
+            flex: 0 0 48%;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 22px 0;
+            margin: 10px 0;
+            background: linear-gradient(135deg, #a6c0fe 0%, #f68084 100%);
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);
+        }
+
+        .code-section {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 14px;
+            max-height: 100%;
+        }
+
+        .code-section code {
+            white-space: pre-wrap;
+            word-break: break-word;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            input[type="text"] {
+                width: 100%;
+            }
+
+            .button-group {
+                gap: 10px;
+            }
+
+            button {
+                flex: 1 1 48%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <!-- Calculator Section -->
+        <div class="container">
+            <div class="display" id="display">Result</div>
+            <input type="number" id="numInput1" placeholder="Enter number one" />
+            <input type="number" id="numInput2" placeholder="Enter number two" />
+            <div class="button-group">
+                <button onclick="add()">+</button>
+                <button onclick="sub()">-</button>
+                <button onclick="mult()">*</button>
+                <button onclick="div()">/</button>
+            </div>
+        </div>
+
+        <!-- Code Display Section -->
+        <div class="code-section">
+            <code>
+/* JavaScript Calculator Functions */
+function add() {
+    let x = document.getElementById('numInput1').value;
+    let y = document.getElementById('numInput2').value;
+    let z = Number(x) + Number(y);
+    document.getElementById('display').innerHTML = z;
+}
+
+function sub() {
+    let x = document.getElementById('numInput1').value;
+    let y = document.getElementById('numInput2').value;
+    let z = Number(x) - Number(y);
+    document.getElementById('display').innerHTML = z;
+}
+
+function mult() {
+    let x = document.getElementById('numInput1').value;
+    let y = document.getElementById('numInput2').value;
+    let z = Number(x) * Number(y);
+    document.getElementById('display').innerHTML = z;
+}
+
+function div() {
+    let x = document.getElementById('numInput1').value;
+    let y = document.getElementById('numInput2').value;
+    let z = Number(x) / Number(y);
+    document.getElementById('display').innerHTML = z;
+}
+      </code>
+        </div>
+    </div>
+
+    <script>
+        function add() {
+            let x = document.getElementById('numInput1').value;
+            let y = document.getElementById('numInput2').value;
+            let z = Number(x) + Number(y);
+            document.getElementById('display').innerHTML = z;
+        }
+
+        function sub() {
+            let x = document.getElementById('numInput1').value;
+            let y = document.getElementById('numInput2').value;
+            let z = Number(x) - Number(y);
+            document.getElementById('display').innerHTML = z;
+        }
+
+        function mult() {
+            let x = document.getElementById('numInput1').value;
+            let y = document.getElementById('numInput2').value;
+            let z = Number(x) * Number(y);
+            document.getElementById('display').innerHTML = z;
+        }
+
+        function div() {
+            let x = document.getElementById('numInput1').value;
+            let y = document.getElementById('numInput2').value;
+            let z = Number(x) / Number(y);
+            document.getElementById('display').innerHTML = z;
+        }
+    </script>
+</body>
+
+</html>
