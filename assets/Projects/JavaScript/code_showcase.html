@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming IO Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./code_showcase.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-brand"><span class="nav-title">Programming</span> IO Explorer</div>
+        <button class="nav-toggle" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <div class="nav-links" id="navMenu">
+            <a href="#c" onclick="showTab('c')">C</a>
+            <a href="#java" onclick="showTab('java')">Java</a>
+            <a href="#python" onclick="showTab('python')">Python</a>
+            <a href="#javascript" onclick="showTab('js')">JavaScript</a>
+            <a href="#swift" onclick="showTab('swift')">Swift</a>
+        </div>
+    </nav>
+
+    <!-- Language selection cards -->
+    <section class="language-container">
+        <div class="language-card" onclick="showTab('c')">
+            <i class="fab fa-cuttlefish"></i>
+            <div class="language-title">C</div>
+        </div>
+        <div class="language-card" onclick="showTab('java')">
+            <i class="fab fa-java"></i>
+            <div class="language-title">Java</div>
+        </div>
+        <div class="language-card" onclick="showTab('python')">
+            <i class="fab fa-python"></i>
+            <div class="language-title">Python</div>
+        </div>
+        <div class="language-card" onclick="showTab('js')">
+            <i class="fab fa-js-square"></i>
+            <div class="language-title">JavaScript</div>
+        </div>
+        <div class="language-card" onclick="showTab('swift')">
+            <i class="fab fa-apple"></i>
+            <div class="language-title">Swift</div>
+        </div>
+    </section>
+    <div id="java" class="tab-content active">
+        <div class="section">
+            <div class="code-block">
+                <h3>Assigned Input (Java)</h3>
+                <pre><code>public class Main {
+public static void main(String[] args) {
+    String name = "Khushal Digrase";
+    System.out.println("Hello, " + name + "!");
+}
+}</code></pre>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <pre>Hello, Khushal Digrase!</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="code-block">
+                <h3>Terminal Input (Java)</h3>
+                <pre><code>import java.util.Scanner;
+
+public class Main {
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter your name: ");
+    String name = scanner.nextLine();
+    System.out.println("Hello, " + name + "!");
+}
+}</code></pre>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <pre>Enter your name: Khushal
+Hello, Khushal!</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Python Tab -->
+    <div id="python" class="tab-content">
+        <div class="section">
+            <div class="code-block">
+                <h3>Assigned Input (Python)</h3>
+                <pre><code>name = "Khushal"
+print("Hello, " + name + "!")</code></pre>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <pre>Hello, Khushal!</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="code-block">
+                <h3>Terminal Input (Python)</h3>
+                <pre><code>name = input("Enter your name: ")
+print("Hello, " + name + "!")</code></pre>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <pre>Enter your name: Khushal D
+Hello, Khushal D!</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swift Tab -->
+    <div id="swift" class="tab-content">
+        <div class="section">
+            <div class="code-block">
+                <h3>Assigned Input (Swift)</h3>
+                <pre><code>let name = "Khushal D"
+print("Hello, \(name)!")</code></pre>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <pre>Hello, Khushal D!</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="code-block">
+                <h3>Terminal Input (Swift)</h3>
+                <pre><code>import Foundation
+
+print("Enter your name: ", terminator: "")
+if let name = readLine() {
+print("Hello, \(name)!")
+}</code></pre>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <pre>Enter your name: Khushal
+Hello, Khushal!</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- C Tab -->
+    <div id="c" class="tab-content">
+        <div class="section">
+            <div class="code-block">
+                <h3>Assigned Input (C)</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+char name[] = "Khushal";
+printf("Hello, %s!\n", name);
+return 0;
+}</code></pre>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <pre>Hello, Khushal!</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="code-block">
+                <h3>Terminal Input (C)</h3>
+                <pre><code>#include &lt;stdio.h&gt;
+
+int main() {
+char name[50];
+printf("Enter your name: ");
+scanf("%s", name);
+printf("Hello, %s!\n", name);
+return 0;
+}</code></pre>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <pre>Enter your name: Khushal
+Hello, Khushal!</pre>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Tab -->
+    <div id="js" class="tab-content">
+        <div class="section">
+            <div class="code-block">
+                <h3>Form Input (JS)</h3>
+                <pre><code>function JavaScript() {
+let name = document.getElementById("javaScript-input").value;
+document.getElementById("javascript-output").innerHTML = "Hello, " + name + "!";
+}</code></pre>
+                <div>
+                    <input type="text" id="js-input" placeholder="Your name" />
+                    <button onclick="JavaScript()">Submit</button>
+                </div>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <div id="js-output">The output will be displayed here</div>
+            </div>
+        </div>
+
+        <!-- Prompt Section (JS) -->
+        <div class="section">
+            <div class="code-block">
+                <h3>Prompt (JS)</h3>
+                <pre><code>function promptAlert() {
+let name = prompt("Enter your name:");
+if (name) {
+alert("Hello, " + name + "!");
+document.getElementById("prompt-output").innerHTML = "Hello, " + name + "!";
+}
+}</code></pre>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <div id="prompt-output">Output will display after the alert.</div>
+                <div style="margin-top:1rem;text-align:right">
+                    <button onclick="promptAlert()">Try Prompt</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert Section (JS) -->
+        <div class="section">
+            <div class="code-block">
+                <h3>Alert (JS)</h3>
+                <pre><code>function alertFunction() {
+alert("Hello from the Alert!");
+document.getElementById("alert-output").innerHTML = "Hello from the Alert!";
+}</code></pre>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <div id="alert-output">Click button for alert output</div>
+                <div style="margin-top:1rem;text-align:right">
+                    <button onclick="alertFunction()">Show Alert</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="code-block">
+                <h3>Direct Assignment (JS)</h3>
+                <pre><code>function directAssignment() {
+let name = "Khushal";
+document.getElementById("direct-output").innerHTML = "Hello, " + name + "!";
+}</code></pre>
+            </div>
+            <div class="output-block">
+                <h3>Output</h3>
+                <div id="direct-output">Click to show output</div>
+                <div style="margin-top:1rem;text-align:right">
+                    <button onclick="directAssignment()">Run Direct</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Programming IO Explorer. All rights reserved.</p>
+    </footer>
+    <script src="./code_showcase.js"></script>
+</body>
+
+</html>
