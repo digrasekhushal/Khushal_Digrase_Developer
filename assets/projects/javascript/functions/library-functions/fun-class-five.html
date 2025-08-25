@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div id="display"></div>
+      <input type="text" id="inputName" placeholder="Enter Your Name" />
+      <input type="date" id="inputAge" placeholder="Enter Your Age" />
+      <button onclick="outputFunction()">Output</button>
+    </div>
+    <script>
+      function calender() {
+        const date = new Date("03-08-2025");
+        const oldDate = new Date(document.getElementById("inputAge").value);
+        let ageValue = date - oldDate;
+        //   Years
+        const ageYears = ageValue / (1000 * 60 * 60 * 24 * 365);
+        return ageYears;
+      }
+
+      function inputValue() {
+        let name = document.getElementById("inputName").value;
+        return name;
+      }
+
+      function outputFunction() {
+        let info = inputValue();
+        let name = info.charAt(0).toUpperCase() + info.slice(1);
+        let year = calender();
+        let age = year;
+        document.getElementById(
+          "display"
+        ).innerHTML = `Hello ${name}, you are ${age} year old.`;
+      }
+    </script>
+  </body>
+</html>

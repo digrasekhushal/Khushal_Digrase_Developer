@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EXR ONE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1> Basics UI</h1>
+
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput" placeholder="Type your name">
+
+    <button onclick="displayGreeting()">Greet Me!</button>
+
+    <div id="output"></div>
+</body>
+  <script>
+        function displayGreeting() {
+            let name = document.getElementById('nameInput').value;
+
+            if (name.trim() === "") {
+                document.getElementById('output').innerText = "Please enter a name.";
+            } else {
+                document.getElementById('output').innerText = "Hello, " + name + "!";
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="display"></div>
+    <button onclick="calendarData()">Calendar</button>
+    <script>
+      function calendar() {
+        const date = new Date("2025-08-02");
+        const day = date.getDay();
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        const time = date.getTime();
+
+        let calendarValue = {
+          a: date,
+          b: day,
+          c: year,
+          d: month,
+          e: time,
+        };
+
+        return calendarValue;
+      }
+
+      function calendarData() {
+        const dayDate = calendar();
+        const displayString = `
+        Date: ${dayDate.a}<br>
+        Day (0 = Sunday, 6 = Saturday): ${dayDate.b}<br>
+        Year: ${dayDate.c}<br>
+        Month (0 = January, 11 = December): ${dayDate.d}<br>
+        Timestamp: ${dayDate.e}
+    `;
+
+        document.getElementById("display").innerHTML = displayString;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attractive Calculator UI</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #8360c3, #2ebf91);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container-calculator {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .calculator-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .display-output {
+      background-color: #f1f3f5;
+      width: 350px;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      font-size: 28px;
+      text-align: right;
+      color: #333;
+      min-height: 50px;
+      box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .calculator-buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      width: 100%;
+    }
+
+    button {
+      font-size: 20px;
+      font-weight: 600;
+      padding: 20px;
+      background: linear-gradient(to top right, #6dd5ed, #2193b0);
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(to top right, #2193b0, #6dd5ed);
+      transform: scale(1.05);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    .equal {
+      background: linear-gradient(to top right, #ff6a00, #ee0979);
+      color: rgb(0, 0, 0);
+    }
+
+    .equal:hover {
+      background: linear-gradient(to top right, #ee0979, #ff6a00);
+    }
+
+    .clear {
+      background: #ff4d4f;
+      color: rgb(0, 0, 0);
+    }
+
+    .clear:hover {
+      background: #e60000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-calculator">
+    <div class="calculator-layout">
+      <div class="display-output" id="display">0</div>
+      <div class="calculator-buttons">
+        <button class="clear">C</button>
+        <button>/</button>
+        <button>*</button>
+        <button>-</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button style="grid-row: span 2;">+</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="equal" style="grid-row: span 2">=</button>
+        <button style="grid-column: span 2;">0</button>
+        <button>.</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

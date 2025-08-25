@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bill Calculation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .form-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 50%;
+      }
+
+      .form-container h3 {
+        margin-bottom: 20px;
+        text-align: center;
+        color: #333;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .form input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: auto;
+      }
+
+      .form button {
+        padding: 12px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .form button:hover {
+        background-color: #45a049;
+      }
+
+      .bill-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 55%;
+        max-width: 800px;
+        margin-top: 20px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      table caption {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .table-heading {
+        background-color: #f1f1f1;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      td {
+        background-color: #f9f9f9;
+      }
+
+      .table-heading th {
+        background-color: #dcdcdc;
+      }
+
+      .total-price {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="form-container">
+        <h3>Input Product Details</h3>
+        <div class="form">
+          <input type="text" id="product-name" placeholder="Product Name" />
+          <input type="number" id="product-price" placeholder="Product Price" />
+          <input
+            type="number"
+            id="product-quantity"
+            placeholder="Product Quantity"
+          />
+          <button onclick="addBill()">Add Product</button>
+        </div>
+      </div>
+      <div class="bill-container">
+        <table>
+          <caption>
+            <h1>Bill Summary</h1>
+          </caption>
+          <thead>
+            <tr class="table-heading">
+              <th>Product Name</th>
+              <th>Product Price</th>
+              <th>Product Quantity</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody id="bill-table-body"></tbody>
+        </table>
+        <div class="total-price">
+          Total Amount: ₹<span id="total-amount">0.00</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let billArray = [];
+      let totalAmount = 0;
+
+      function addBill() {
+        let productName = document.getElementById("product-name").value;
+        let productPrice = Number(
+          document.getElementById("product-price").value
+        );
+        let productQuantity = Number(
+          document.getElementById("product-quantity").value
+        );
+
+        if (
+          !productName ||
+          isNaN(productPrice) ||
+          isNaN(productQuantity) ||
+          productPrice <= 0 ||
+          productQuantity <= 0
+        ) {
+          alert("Please enter valid product details.");
+          return;
+        }
+
+        let total = productPrice * productQuantity;
+        billArray.push({
+          product_name: productName,
+          product_price: productPrice,
+          product_quantity: productQuantity,
+          total: total,
+        });
+        totalAmount += total;
+        document.getElementById("product-name").value = "";
+        document.getElementById("product-price").value = "";
+        document.getElementById("product-quantity").value = "";
+
+        showBill();
+        updateTotalAmount();
+      }
+
+      function showBill() {
+        const billTableBody = document.getElementById("bill-table-body");
+        billTableBody.innerHTML = "";
+
+        for (let i = 0; i < billArray.length; i++) {
+          const billItem = billArray[i];
+          billTableBody.innerHTML += `
+            <tr class="table-data">
+              <td>${billItem.product_name}</td>
+              <td>₹${billItem.product_price.toFixed(2)}</td>
+              <td>${billItem.product_quantity}</td>
+              <td>₹${billItem.total.toFixed(2)}</td>
+            </tr>
+          `;
+        }
+      }
+
+      function updateTotalAmount() {
+        const totalAmountElement = document.getElementById("total-amount");
+        totalAmountElement.textContent = totalAmount.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

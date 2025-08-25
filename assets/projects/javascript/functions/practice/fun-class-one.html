@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Class One</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .main-container {
+        background: linear-gradient(135deg, #00c9ff, #92fe9d);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .button {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      #button-one {
+        background-color: #4caf50;
+      }
+
+      #button-two {
+        background-color: blue;
+      }
+
+      #button-three {
+        background-color: yellow;
+        color: black;
+      }
+
+      #button-four {
+        background-color: green;
+      }
+
+      #button-five {
+        background-color: gray;
+      }
+
+      .button:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container" id="main-container">
+      <div class="container" id="container">
+        <h1 id="display">Click a Button</h1>
+        <button class="button" id="button-one" type="button" onclick="hello()">
+          Click
+        </button>
+        <button
+          class="button"
+          id="button-two"
+          type="button"
+          onclick="button('blue')"
+        >
+          Blue
+        </button>
+        <button
+          class="button"
+          id="button-three"
+          type="button"
+          onclick="button('yellow')"
+        >
+          Yellow
+        </button>
+        <button
+          class="button"
+          id="button-four"
+          type="button"
+          onclick="button('green')"
+        >
+          Green
+        </button>
+        <button
+          class="button"
+          id="button-five"
+          type="button"
+          onclick="button('Gray')"
+        >
+          Gray
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function hello() {
+        console.log("Hello World");
+        alert("Hello World");
+        document.getElementById("display").innerHTML = "Hello World";
+        document.getElementById("container").style.backgroundColor = "pink";
+        document.getElementById("main-container").style.background = "red";
+        document.getElementById("button-one").style.display = "none";
+      }
+
+      function button(colorChange) {
+        document.getElementById("container").style.backgroundColor =
+          colorChange;
+      }
+    </script>
+  </body>
+</html>

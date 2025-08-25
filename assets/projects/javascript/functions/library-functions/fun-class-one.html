@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Functions</title>
+  </head>
+  <body>
+    <script>
+      //includes(); Library Function, Checks in boolean type, if a value is includes here or not.
+      const num = "1 2 3 4 5 6 8 9 0";
+      console.log(num.includes("7"));
+
+      const char = "hello";
+      console.log(char.includes("hello"));
+
+      //toUpperCase(); Library Function, use to smaller string convert into Capital string.
+      const text = "khushal digrase";
+      console.log(text.toUpperCase());
+
+      //toLocalLowerCase(); Library Function, use to Capital string convert into smaller string.
+      const str = "KHUSHAL DIGRASE";
+      console.log(str.toLocaleLowerCase());
+
+      //slice(); Library Function, use to slice the array into new array.
+      const strOne = [1, 2, 3, 4, 5];
+      console.log(strOne.slice(0, 3));
+
+      //concat(); Library Function,
+      const strTwo = [1, 2, 3, 4, 5, 6];
+      //   concat
+      console.log(strTwo.concat(7, 8));
+      //   pop
+      console.log(strTwo.pop(1));
+      console.log(strTwo);
+      //   push
+      console.log(strTwo.push(6));
+      console.log(strTwo);
+      //   shift
+      console.log(strTwo.shift(1));
+      console.log(strTwo);
+      //   unshift
+      console.log(strTwo.unshift(0, 1, 7, 8));
+      console.log(strTwo);
+
+      //   split
+      const textOne = "Khushal";
+      console.log(textOne.split(""));
+      // join
+      console.log(textOne.split("").join(" "));
+
+      //   splice
+      const arra = [1, 2, 3, 4, 5, 6];
+      console.log(arra.splice(1, 2));
+      console.log(arra);
+
+      //   sort
+      const arr = [1, 6, 2, 4, 7, 3, 5, 9, 8];
+      console.log(arr);
+      console.log(arr.sort());
+
+      //   chartAt
+      const color = "green";
+      console.log(color.charAt(2).toUpperCase());
+
+      //   indexOf
+      const dic = "Khushal";
+      //   indexOf
+      console.log(dic.indexOf("l"));
+      //   lastIndexOf
+      console.log(dic.lastIndexOf("h"));
+      //   replace
+      console.log(dic.replace("Khushal", "digrase"));
+
+      //   trim
+      const index = " khushal ";
+      //   trim - used for remove the white space
+      console.log(index.trim());
+
+      //   repeat
+      const font = "enjoy";
+      console.log(font.repeat(2));
+    </script>
+  </body>
+</html>

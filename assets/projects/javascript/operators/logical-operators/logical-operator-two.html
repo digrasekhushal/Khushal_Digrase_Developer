@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      ///// Logical Operators ---------------------------------------------
+
+      // 1. AND (&&)
+      var a = 10;
+      var b = 20;
+      var c = 30;
+      var d = 40;
+      var result = a > b && b > c && c > d;
+      console.log(result); // false
+
+      // 2. OR (||)
+      var w = 40;
+      var x = 10;
+      var y = 20;
+      var z = 30;
+      var resultOne = w > x || x > y || y > z;
+      console.log(resultOne); // true
+
+      // 3. NOT (!)
+      var p = 10;
+      var q = 20;
+      var r = 30;
+      var s = 40;
+      var resultTwo = !(p > q && q > r && r > s);
+      console.log(resultTwo); // true
+    </script>
+  </body>
+</html>

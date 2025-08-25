@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(#e66465, #9198e5);
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .main-container {
+        width: 900px;
+        height: 400px;
+        background-color: #9ca4f8;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .container-lottery {
+        text-align: center;
+        padding: 20px;
+       
+        border-radius: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #91a2fb;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #8bb0f9;
+      }
+      #display {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- main-container section -->
+    <div class="main-container">
+      <!-- container-lottery-one section -->
+      <div class="container-lottery">
+        <div id="displayOne"></div>
+        <button onclick="lotteryFunction('displayOne')">Maha Laxmi</button>
+      </div>
+      <!-- container-lottery-two section -->
+      <div class="container-lottery">
+        <div id="displayTwo"></div>
+        <button onclick="lotteryFunction('displayTwo')">Dream 11</button>
+      </div>
+      <!-- container-lottery-three section -->
+      <div class="container-lottery">
+        <div id="displayThree"></div>
+        <button onclick="lotteryFunction('displayThree')">MPL</button>
+      </div>
+    </div>
+    <script>
+      // random number 0 to 9
+      function numberGenerator() {
+        return Math.floor(Math.random() * 10);
+      }
+
+      function lotteryFunction(displayId) {
+        const lotteryNumber = numberGenerator();
+        document.getElementById(
+          displayId
+        ).innerText = `Lottery Number: ${lotteryNumber}`;
+      }
+    </script>
+  </body>
+</html>

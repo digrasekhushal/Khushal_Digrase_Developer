@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Translator</title>
+    <style>
+      /* General body styling */
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(to right, #f2b9fc, #b1f2fd);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333;
+      }
+
+      /* Main container for centering */
+      .main-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        width: 100%;
+        max-width: 600px;
+        padding: 40px;
+        background-color: white;
+        box-sizing: border-box;
+      }
+
+      /* Heading Styling */
+      h1 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      /* Paragraph Styling */
+      p {
+        font-size: 1.1rem;
+        color: #767676;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        text-align: justify;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        padding: 20px 0;
+      }
+
+      /* Select dropdown styling */
+      select {
+        font-family: "Arial", sans-serif;
+        padding: 12px 25px;
+        font-size: 1.1rem;
+        border-radius: 12px;
+        border: 2px solid #ddd;
+        background-color: #f9f9f9;
+        cursor: pointer;
+        transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;
+        width: 60%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      select:focus {
+        border-color: #007bff;
+        background-color: #e7f1ff;
+        outline: none;
+        box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+      }
+
+      /* Button styling */
+      button {
+        font-family: "Arial", sans-serif;
+        padding: 12px 25px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background-color 0.3s, transform 0.2s;
+        width: 60%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      button:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+      }
+
+      button:active {
+        transform: translateY(0);
+      }
+
+      /* Media query for responsiveness */
+      @media (max-width: 600px) {
+        .main-container {
+          width: 90%;
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        button {
+          width: 100%;
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 id="heading">Artificial Intelligence</h1>
+      <p id="paragraph">
+        Artificial intelligence (AI) is the capability of computational systems
+        to perform tasks typically associated with human intelligence, such as
+        learning, reasoning, problem-solving, perception, and decision-making.
+        It is a field of research in computer science that develops and studies
+        methods and software that enable machines to perceive their environment
+        and use learning and intelligence to take actions that maximize their
+        chances of achieving defined goals.
+      </p>
+
+      <h1 id="adm-heading">Admission Process</h1>
+      <ul id="adm-paragraph">
+        <li>Step 1: Application Submission</li>
+        <li>Step 2: Review and Evaluation</li>
+        <li>Step 3: Interview and Assessment</li>
+        <li>Step 4: Admission Decision</li>
+      </ul>
+
+      <div class="button-container">
+        <select name="language" id="select-lang">
+          <option value="english">English</option>
+          <option value="marathi">Marathi</option>
+          <option value="hindi">Hindi</option>
+          <option value="spanish">Spanish</option>
+        </select>
+        <button onclick="translateLang()">Translate</button>
+      </div>
+    </div>
+
+    <script>
+      const englishData = {
+        heading: "Artificial Intelligence",
+        paragraph:
+          "Artificial intelligence (AI) is the capability of computational systems to perform tasks typically associated with human intelligence, such as learning, reasoning, problem-solving, perception, and decision-making.",
+        adm_heading: `Admission Process`,
+        adm_paragraph: [
+          "Step 1: Application Submission",
+          "Step 2: Review and Evaluation",
+          "Step 3: Interview and Assessment",
+          "Step 4: Admission Decision",
+        ],
+      };
+
+      const marathiData = {
+        heading: `कृत्रिम बुद्धिमत्ता (एआय)`,
+        paragraph: `कृत्रिम बुद्धिमत्ता (एआय) ही संगणकीय प्रणालींची क्षमता आहे जी सामान्यतः मानवी बुद्धिमत्तेशी संबंधित कार्ये करते,
+      जसे की शिक्षण, तर्क, समस्या सोडवणे, धारणा आणि निर्णय घेणे.`,
+        adm_heading: `प्रवेश प्रक्रिया`,
+        adm_paragraph: [
+          "चरण 1: अर्ज सादर करणे",
+          "चरण 2: पुनरावलोकन आणि मूल्यांकन",
+          "चरण 3: मुलाखत आणि मूल्यांकन",
+          "चरण 4: प्रवेश निर्णय",
+        ],
+      };
+
+      const hindiData = {
+        heading: `कृत्रिम बुद्धिमत्ता (एआय) `,
+        paragraph: `कृत्रिम बुद्धिमत्ता (एआय) है कंप्यूटेशनल सिस्टम की क्षमता जो मानव बुद्धिमत्ता से संबंधित कार्यों को करने की क्षमता है, जैसे कि सीखना, तर्क, समस्या हल करना, धारणा करना और निर्णय लेना। यह एक कंप्यूटर विज्ञान का क्षेत्र है जो मशीनों को उनके पर्यावरण को समझने और सीखने के लिए सॉफ्टवेयर विकसित करता है और अध्ययन करता है जो निर्धारित लक्ष्यों को प्राप्त करने के लिए कार्य करता है.`,
+        adm_heading: `प्रवेश प्रक्रिया`,
+        adm_paragraph: [
+          "चरण 1: आवेदन पत्र प्रस्तुत करना",
+          "चरण 2: समीक्षा और मूल्यांकन",
+          "चरण 3: साक्षात्कार और मूल्यांकन",
+          "चरण 4: प्रवेश निर्णय",
+        ],
+      };
+
+      const spanishData = {
+        heading: `Inteligencia Artificial`,
+        paragraph: `La inteligencia artificial (IA) es la capacidad de los sistemas computacionales para realizar tareas típicamente asociadas con la inteligencia humana, como aprender, razonar, resolver problemas, percibir y tomar decisiones.`,
+        adm_heading: `Proceso de Admisión`,
+        adm_paragraph: [
+          "Paso 1: Envío de la Solicitud",
+          "Paso 2: Revisión y Evaluación",
+          "Paso 3: Entrevista y Evaluación",
+          "Paso 4: Decisión de Admisión",
+        ],
+      };
+
+      const translate = {
+        english: englishData,
+        marathi: marathiData,
+        hindi: hindiData,
+        spanish: spanishData,
+      };
+
+      function translateLang() {
+        const selectLang = document.getElementById("select-lang");
+        const result = translate[selectLang.value];
+        document.getElementById("heading").innerText = result.heading;
+        document.getElementById("paragraph").innerText = result.paragraph;
+        document.getElementById("adm-heading").innerText = result.adm_heading;
+        document.getElementById("adm-paragraph").innerHTML =
+          result.adm_paragraph;
+        localStorage.setItem("language", selectLang.value);
+      }
+
+      window.onload = function () {
+        let savedLang = localStorage.getItem("language");
+        document.getElementById("select-lang").value = savedLang;
+        translateLang();
+      };
+    </script>
+  </body>
+</html>

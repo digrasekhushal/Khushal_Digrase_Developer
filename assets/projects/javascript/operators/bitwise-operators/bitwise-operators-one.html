@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bitwise operators class one</title>
+  </head>
+  <body>
+    <h1>Bitwise Operators</h1>
+    <p>Check the console and alert messages for results.</p>
+
+    <input type="text" id="input1" placeholder="Enter first number" />
+    <input type="text" id="input2" placeholder="Enter second number" />
+    <button id="compareBtn" onclick="compareButton()">Compare</button>
+    <h1 id="display"></h1>
+    <script>
+      function compareButton() {
+        let num1 = Number(document.getElementById("input1").value);
+        let num2 = Number(document.getElementById("input2").value);
+        let display = document.getElementById("display");
+
+        if (num1 > num2) {
+          display.innerHTML = num1 + " is greater than " + num2;
+        } else if (num1 < num2) {
+          display.innerHTML = num2 + " is greater than " + num1;
+        } else {
+          display.innerHTML = "Both numbers are equal";
+        }
+      }
+      // 1. Bitwise AND (&) operator
+
+      let a = 4; // 0101 in binary
+      if ((a & 1) == 0) {
+        console.log("The number is even");
+        alert("The number is even");
+      } else {
+        console.log("The number is odd");
+        alert("The number is odd");
+      }
+      // 2. Bitwise OR (|) operator
+
+      let b = 3; // 0011 in binary
+      if ((b | 1) == 1) {
+        console.log("The number is odd");
+        alert("The number is odd");
+      } else {
+        console.log("The number is even");
+        alert("The number is even");
+      }
+
+      // 3. Bitwise XOR (^) operator
+      let c = 6; // 0110 in binary
+      if ((c ^ 1) == 1) {
+        console.log("The number is odd");
+        alert("The number is odd");
+      } else {
+        console.log("The number is even");
+        alert("The number is even");
+      }
+    </script>
+  </body>
+</html>

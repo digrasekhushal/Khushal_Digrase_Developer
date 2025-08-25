@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>While Loop Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main-container {
+        height: auto;
+        width: 100%;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 1200px;
+      }
+      h1 {
+        text-align: center;
+        color: #4a90e2;
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: #4a90e2;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 20px;
+        margin: 5px;
+        transition: transform 0.3s ease-in-out;
+      }
+      .box:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>While Loop Example</h1>
+      <div class="container" id="display"></div>
+    </div>
+
+    <script>
+      let x = 0;
+      let a = [1, 2, 3, 4, 5];
+      let display = "";
+
+      while (x < 5) {
+        display += `<div class='box'>${a[x]}</div>`;
+        x++;
+      }
+      document.getElementById("display").innerHTML = display;
+    </script>
+  </body>
+</html>

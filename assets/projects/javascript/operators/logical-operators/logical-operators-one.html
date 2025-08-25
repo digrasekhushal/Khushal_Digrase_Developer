@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Operators</title>
+  </head>
+  <body>
+    <script>
+      //////// Logical operators ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      // && (AND), || (OR), ! (NOT)
+
+      var x = true;
+      var y = false;
+
+      // AND (&&)
+      var andResult = x && y;
+      console.log("x AND y: ", andResult); // false
+
+      // OR (||)
+      var orResult = x || y;
+      console.log("x OR y: ", orResult); // true
+
+      // NOT (!)
+      var notX = !x;
+      console.log("NOT x: ", notX); // false
+
+      var notY = !y;
+      console.log("NOT y: ", notY); // true
+
+      // Combining logical expressions
+      var combined = (x || y) && !y;
+      console.log("Combined (x || y) && !y: ", combined); // true
+
+      console.log("=============================================");
+    </script>
+  </body>
+</html>

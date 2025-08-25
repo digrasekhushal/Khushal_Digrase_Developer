@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Class One</title>
+  </head>
+  <body>
+    <h1>Array Class One</h1>
+    <h1 id="display"></h1>
+    <script>
+      // Array Class One
+
+      // Array = [7, 4, 5, 6, 3, 1, 2] Display reverse
+
+      //   let value = [7, 4, 5, 6, 3, 1, 2];
+
+      //   for (let i = 0; i < value.length; i++) {
+      //     if (i % 2 == 0) {
+      //       console.log(value[i] + 1);
+      //       document.getElementById("display").innerHTML = value[i] + 1;
+      //     } else {
+      //       console.log(value[i]);
+      //       document.getElementById("display").innerHTML = value[i];
+      //     }
+      //   }
+
+      //   Array Reverse Exercise used Push
+
+      //   let array = [7, 4, 5, 6, 3, 1, 2];
+      //   let reverseArray = [];
+
+      //   for (let i = array.length - 1; i >= 0; i--) {
+      //     reverseArray.push(array[i]);
+      //   }
+      //   console.log(reverseArray);
+      //   document.getElementById("display").innerHTML = reverseArray;
+
+      // Array Change Exercise used Push Step 1
+
+      //   let bike = ["Sanchit", "Pranay", "Khushal"];
+      //   let newBike = [];
+
+      //   newBike.push(bike[2]);
+      //   newBike.push(bike[0]);
+      //   newBike.push(bike[1]);
+
+      //   console.log("Problem " + bike);
+
+      //   console.log("Solution " + newBike);
+
+      // Array Change Exercise used  Step 2
+
+      let bike = ["Sanchit", "Pranay", "Khushal"];
+      let newBike = [];
+
+      for (let i = bike.length - 1; i >= 0; i--) {
+        if (i == bike.length - 1) {
+          console.log(bike[2]);
+        } else if (i == bike.length - 2) {
+          console.log(bike[0]);
+        } else {
+          console.log(bike[1]);
+        }
+      }
+
+      // =========== OR ===========
+
+      // let bike = ["Sanchit", "Pranay", "Khushal"];
+      // let newBike = [];
+
+      // for (let i = bike.length - 1; i >= 0; i--) {
+      //   if (i == bike.length - 1) {
+      //     console.log(bike[2]);
+      //   } else if (i == 1) {
+      //     console.log(bike[0]);
+      //   } else {
+      //     console.log(bike[1]);
+      //   }
+      // }
+    </script>
+  </body>
+</html>

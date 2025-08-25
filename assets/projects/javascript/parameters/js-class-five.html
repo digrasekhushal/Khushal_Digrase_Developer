@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fun & Para class five</title>
+  </head>
+  <body>
+    <h1 id="result"></h1>
+    <script>
+      // fun & para used for sum of two numbers
+      function sum(a, b) {
+        return a + b;
+      }
+
+      // fun & para used for diff of two numbers
+      function sub(a, b) {
+        return a - b;
+      }
+
+      // fun & para used for product of two numbers
+      function mul(a, b) {
+        return a * b;
+      }
+
+      // fun & para used for div of two numbers
+      function div(a, b) {
+        return a / b;
+      }
+
+      // fun called in fun with para
+      function calculator(x, y) {
+        let add = sum(x, y);
+        let subtract = sub(x, y);
+        let multiply = mul(x, y);
+        let divide = div(x, y);
+        return add;
+      }
+
+      // value add in para
+      let result = calculator(20, 10);
+      document.getElementById("result").innerHTML = result;
+      console.log(result);
+      alert(result);
+
+      // 5 = 5 x 4 x 3 x 2 x 1
+
+      function factorial(n) {
+        if (n == 0) {
+          return 1;
+        } else {
+          return n * factorial(n - 1);
+        }
+      }
+
+      let output = factorial(6);
+      console.log(output);
+      alert(output);
+      document.getElementById("result").innerHTML = output;
+    </script>
+  </body>
+</html>

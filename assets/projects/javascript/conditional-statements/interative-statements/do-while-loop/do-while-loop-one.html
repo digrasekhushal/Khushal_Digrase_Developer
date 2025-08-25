@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #4d8bf6;
+      }
+      button {
+        background-color: #32a0fa;
+        color: rgb(66, 66, 66);
+        padding: 10px 30px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      button:hover {
+        background-color: #1fb4ff;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container">
+        <h1>Do While Loop Example</h1>
+        <p>Click the button to start the loop.</p>
+        <div id="output"></div>
+        <button onclick="getNumber()">Start</button>
+      </div>
+    </div>
+    <script>
+      let a = 0;
+
+      function getNumber() {
+        let num = Number(prompt("Enter a number : "));
+        do {
+          a = a + num;
+          num = Number(prompt("Enter a number : "));
+        } while (num >= 0);
+        document.getElementById("output").innerHTML = "The sum is : " + a;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>interchange values</title>
+  </head>
+  <body>
+    <script>
+      // interchange values of two variables as string without using a third variable
+
+      let a = "Good Morning";
+      let b = "Good Night";
+      console.log("a:", a);
+      console.log("b:", b);
+      console.log("\nBefore interchange:");
+      console.log(a.length, b.length);
+      a = a + b; // "Good Morning Good Night"
+      b = a.slice(0, 12); // "Good Night"
+      a = a.slice(12, 23); // "Good Morning"
+
+      console.log("a:", a);
+      console.log("b:", b);
+
+      // interchange values of two variables using a Array
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Greater Number</h1>
+    <h1 id="display"></h1>
+    <input type="text" id="input1" placeholder="Enter first number">
+    <input type="text" id="input2" placeholder="Enter second number">
+    <button id="compareBtn" onclick="compareButton()">Compare</button>
+</body>
+<pre><code>
+    let A = document.getElementById("input1");
+    let B = document.getElementById("input2");
+    let display = document.getElementById("display");
+
+    function compareButton() {
+        let num1 = Number(A.value);
+        let num2 = Number(B.value);
+
+        if (num1 > num2) {
+            display.innerHTML = num1 + " Is greater than " + num2;
+        } else if (num1 < num2) {
+            display.innerHTML = num2 + " Is grester than " + num1;
+        } else {
+            display.innerHTML = "Both numbers are equal";
+        }
+    }
+    </code>
+<script>
+    // let A = document.getElementById("input1");
+    // let B = document.getElementById("input2");
+    // document.getElementById('display').innerHTML = value;
+
+    // function compareButton() {
+    //   let num1 = Number(A.value);
+    // let num2 = Number(B.value);
+
+    // if (num1 > num2) {
+    //  alert(num1 + " is greater than " + num2);
+    // } else if (num1 < num2) {
+    //  alert(num2 + " is greater than " + num1);
+    //  } else {
+    //   alert("Both numbers are equal.");
+    // }
+    // }
+    let A = document.getElementById("input1");
+    let B = document.getElementById("input2");
+    let display = document.getElementById("display");
+
+    function compareButton() {
+        let num1 = Number(A.value);
+        let num2 = Number(B.value);
+
+        if (num1 > num2) {
+            display.innerHTML = num1 + " Is greater than " + num2;
+        } else if (num1 < num2) {
+            display.innerHTML = num2 + " Is grester than " + num1;
+        } else {
+            display.innerHTML = "Both numbers are equal";
+        }
+    }
+</script>
+
+</html>

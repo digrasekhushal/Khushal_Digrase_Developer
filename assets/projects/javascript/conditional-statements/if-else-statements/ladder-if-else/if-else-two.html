@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="result"></h1>
+
+    <script>
+      // 5 = 5 x 4 x 3 x 2 x 1
+
+      function factorial(n) {
+        if (n == 0) {
+          return 1;
+        } else {
+          return n * factorial(n - 1);
+        }
+      }
+
+      let output = factorial(7);
+      document.getElementById("result").innerHTML = output;
+      console.log(output);
+      alert(output);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Month Display</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .main-container {
+        background-color: #ffffff;
+        padding: 40px 50px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+        transition: transform 0.3s ease;
+      }
+
+      .main-container:hover {
+        transform: scale(1.02);
+      }
+
+      #display {
+        font-size: 24px;
+        color: #1e3a8a;
+        margin-bottom: 25px;
+        min-height: 30px;
+        transition: all 0.3s ease;
+      }
+
+      button {
+        padding: 14px 28px;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        background-color: #2563eb;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s;
+      }
+
+      button:hover {
+        background-color: #1d4ed8;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div id="display">Click the button to enter a month</div>
+      <button onclick="month()">Enter Current Month</button>
+    </div>
+
+    <script>
+      function month() {
+        let input = prompt("Enter the month (1-12):");
+
+        // Convert to number and validate
+        let month = Number(input);
+        let display = "";
+
+        switch (month) {
+          case 1:
+            display = "January";
+            break;
+          case 2:
+            display = "February";
+            break;
+          case 3:
+            display = "March";
+            break;
+          case 4:
+            display = "April";
+            break;
+          case 5:
+            display = "May";
+            break;
+          case 6:
+            display = "June";
+            break;
+          case 7:
+            display = "July";
+            break;
+          case 8:
+            display = "August";
+            break;
+          case 9:
+            display = "September";
+            break;
+          case 10:
+            display = "October";
+            break;
+          case 11:
+            display = "November";
+            break;
+          case 12:
+            display = "December";
+            break;
+          default:
+            display = "❌ Invalid month. Please enter a number between 1 and 12.";
+        }
+
+        document.getElementById("display").innerHTML = display;
+        alert(display);
+      }
+    </script>
+  </body>
+</html>

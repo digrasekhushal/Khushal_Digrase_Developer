@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Class Three</title>
+  </head>
+  <body>
+    <h1>Array Class Three</h1>
+    <h1 id="result"></h1>
+
+    <script>
+      // Create an empty array for storing the values
+      let array = [];
+      let a = 1;
+      for (;;) {
+        let value = prompt("Enter a value or 'E' to stop : " + a++ + " ; ");
+        if (value === "E") {
+          document.getElementById("result").innerHTML =
+            "Array values are : " + array;
+          break;
+        }
+        array.push(value);
+      }
+      document.getElementById("result").innerHTML = array;
+    </script>
+  </body>
+</html>

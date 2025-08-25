@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Multiplication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Multiplication Game</h1>
+  
+    
+    <button onclick="generateMultiplication()">Generate Multiplication</button>
+    
+    <div class="result">
+        <p>Number 1: <span id="num1"></span></p>
+        <p>Number 2: <span id="num2"></span></p>
+        <p>Correct Answer: <span id="result"></span></p>
+    </div>
+
+    <script>
+        function generateMultiplication() {
+            let a = Math.floor(Math.random() * 10);
+            let b = Math.floor(Math.random() * 10);
+
+            document.getElementById('num1').textContent = a;
+            document.getElementById('num2').textContent = b;
+            
+            let correctAnswer = a * b;
+            document.getElementById('result').textContent = correctAnswer;
+        }
+    </script>
+
+</body>
+</html>

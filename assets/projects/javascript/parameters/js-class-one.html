@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="result"></h1>
+    <script>
+      // Function used for sum of two numbers
+      function sum(a, b) {
+        console.log(a + b);
+        return a + b;
+      }
+
+      // Function used for difference of two numbers
+      function sub(a, b) {
+        console.log(a - b);
+        return a - b;
+      }
+
+      // Function used for product of two numbers
+      function mul(a, b) {
+        console.log(a * b);
+        return a * b;
+      }
+
+      // Function used for division of two numbers
+      function div(a, b) {
+        console.log(a / b);
+        return a / b;
+      }
+
+      // function used for calculating the all values
+      function calculator() {
+        let add = sum(54, 5);
+        let diff = sub(10, 3);
+        let prod = mul(7, 9);
+        let divi = div(20, 4);
+        return add;
+      }
+
+      // calling the calculator function
+      let result = calculator();
+      console.log(result);
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

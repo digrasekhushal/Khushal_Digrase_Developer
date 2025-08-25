@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Class Four</title>
+  </head>
+  <body>
+    <h1>Array Class Four</h1>
+    <p id="display"></p>
+    <script>
+      // Algorithm
+
+      // step 1: Start
+      // step 2: Array for Google search name
+      // step 3: Check if name is present in array
+      // step 4: If name is present in array, how many times it is present
+      // step 5: End
+
+      // Code
+      let students = [
+        "Ayush",
+        "Pranay",
+        "Rohit",
+        "Saim",
+        "Praful",
+        "Himanshu",
+        "Yash",
+        "Rohit",
+      ];
+      let name = "Ayush";
+      let count = 0;
+
+      // Loop through the array to count occurrences of the name
+      for (let i = 0; i < students.length; i++) {
+        if (students[i] === name) {
+          count++;
+        }
+      }
+      // Check if the name is found in the array
+      if (count > 0) {
+        console.log(name + " is present in the array " + count + " times.");
+        document.getElementById("display").innerHTML =
+          name + " is present in the array " + count + " times.";
+      } else {
+        console.log(name + " is not present in the array");
+        document.getElementById("display").innerHTML =
+          name + " is not present in the array";
+      }
+    </script>
+  </body>
+</html>

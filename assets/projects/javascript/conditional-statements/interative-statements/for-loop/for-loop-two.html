@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+      }
+      .main-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #4a90e2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1 class="display"></h1>
+    </div>
+    <script>
+      let display = "";
+
+      // Printing 1 to 10, skipping 5
+      for (let i = 1; i <= 10; i++) {
+        if (i !== 5) {
+          display += i + " ";
+        }
+      }
+
+      // Printing 10 to 1, skipping 5
+      for (let i = 10; i >= 1; i--) {
+        if (i !== 5) {
+          display += i + " ";
+        }
+      }
+
+      document.querySelector(".display").innerHTML = display;
+    </script>
+  </body>
+</html>

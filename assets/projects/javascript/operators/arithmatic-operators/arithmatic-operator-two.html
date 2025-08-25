@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Calculator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f3f3f3;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 500px;
+        background: white;
+        margin: auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input {
+        padding: 5px;
+        margin-top: 5px;
+        width: 100%;
+      }
+
+      button {
+        padding: 10px;
+        width: 100%;
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        margin-top: 15px;
+        border: none;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+
+      .results {
+        margin-top: 20px;
+        font-size: 16px;
+        background: #e8f5e9;
+        padding: 15px;
+        border-left: 5px solid #4caf50;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Budget Calculator</h1>
+      <form id="budgetForm">
+        <label
+          >Monthly Income: ₹<input type="number" id="income" required
+        /></label>
+        <label>Rent: ₹<input type="number" id="rent" required /></label>
+        <label>Food: ₹<input type="number" id="food" required /></label>
+        <label
+          >Transport: ₹<input type="number" id="transport" required
+        /></label>
+        <label
+          >Other Expenses: ₹<input type="number" id="others" required
+        /></label>
+
+        <button type="submit" onclick="totalBudget()">Calculate</button>
+      </form>
+
+      <div class="results" id="results"></div>
+    </div>
+
+    <script>
+      function totalBudget() {
+        
+        const income = Number(document.getElementById("income").value);
+        const rent = Number(document.getElementById("rent").value);
+        const food = Number(document.getElementById("food").value);
+        const transport = Number(document.getElementById("transport").value);
+        const others = Number(document.getElementById("others").value);
+
+        const totalExpenses = rent + food + transport + others;
+        const balance = income - totalExpenses;
+        const dailyBudget = balance / 30;
+
+        const resultsDisplay = document.getElementById("results");
+        resultsDisplay.innerHTML = `
+      <strong>Total Expenses:</strong> ₹${totalExpenses.toFixed(2)}<br/>
+      <strong>Remaining Balance:</strong> ₹${balance.toFixed(2)}<br/>
+      <strong>Daily Budget:</strong> ₹${dailyBudget.toFixed(2)}
+    `;
+      }
+
+    </script>
+  </body>
+</html>

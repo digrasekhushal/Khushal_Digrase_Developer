@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fibonacci Series</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+      }
+      .main-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #4a90e2;
+      }
+      h2 {
+        text-align: center;
+        color: #434343;
+        font-size: 24px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>Fibonacci Series</h1>
+     <h2 id="display"></h2>
+    <script>
+      let a = 0;
+      let b = 1;
+      let c = a + b;
+
+      let output = a + " , " + b;
+
+      while (c <= 100) {
+        output += " , " + c;
+        a = b;
+        b = c;
+        c = a + b;
+      }
+      document.getElementById("display").innerHTML = output;
+    </script>
+  </body>
+</html>

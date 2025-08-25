@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank System</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .main-container {
+        text-align: center;
+        background-color: white;
+        padding: 40px 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>Bank Deposit System</h1>
+      <p>Choose an option below:</p>
+      <button onclick="bankSystem()">Start Bank System</button>
+      <div id="display"></div>
+    </div>
+    <script>
+      let balance = 0;
+      function bankSystem() {
+        while (true) {
+          let amountChoice = prompt(
+            "Enter your choice:\n1. Deposite\n 2. Withdraw\n 3. Check Balance\n 4. Exit"
+          );
+          if (amountChoice == 1) {
+            let depositeAmount = Number(prompt("Enter amount to deposit:"));
+            balance = balance + depositeAmount;
+            alert(
+              "Deposited: " + depositeAmount + "\nCurrent Balance: " + balance
+            );
+          } else if (amountChoice == 2) {
+            let withdrawAmount = Number(prompt("Enter amount to withdraw:"));
+            balance = balance - withdrawAmount;
+            alert(
+              "Withdrawn: " + withdrawAmount + "\nCurrent Balance: " + balance
+            );
+          } else if (amountChoice == 3) {
+            alert("Current Balance: " + balance);
+          } else if (amountChoice == 4) {
+            alert("Exiting the system.");
+            break;
+          } else {
+            alert("Invalid choice, please try again.");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div id="display"></div>
+      <input type="text" id="inputValue" placeholder="Enter your value" />
+      <button onclick="msgFunction()">Message</button>
+    </div>
+    <script>
+      // used function calender for store date and year, also its stored in dictionary as a calenderYear and return it
+      function calender() {
+        const date = new Date("2025-08-03");
+        const year = date.getFullYear();
+
+        let calenderYear = {
+          a: date,
+          b: year,
+        };
+        return calenderYear;
+      }
+      // used function input for get input value from front page and its stored in as a one variable and return it
+      function input() {
+        let one = document.getElementById("inputValue").value;
+        return one;
+      }
+
+      //   used function msgFunction for when user click on button so get the output of input with current year
+      function msgFunction() {
+        let one = input();
+        let year = calender();
+        // used library functions for solve the requirement
+        let output = one.charAt(0).toUpperCase() + one.slice(1);
+        document.getElementById(
+          "display"
+        ).innerHTML = `Welcome ${output}, This year is ${year.b}`;
+      }
+    </script>
+  </body>
+</html>

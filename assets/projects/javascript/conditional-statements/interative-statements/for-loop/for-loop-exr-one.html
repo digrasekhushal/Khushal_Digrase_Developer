@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>For loop Example One</h1>
+    <p id="output"></p>
+
+    <script>
+        const fruits = ["Apple", "Banana", "Orange", "Mango"];
+        // const outputElement = document.getElementById("output");
+
+        // ====== For of Loop ========//
+
+        // for (const fruit of fruits) {
+        //     console.log(fruit);
+        //     outputElement.innerHTML += fruit + "<br>";
+        // }
+
+        // ====== For of Loop added values in new array ========//
+
+        // let newArray = [];
+
+        // for (const box of fruits) {
+
+        // }
+
+        // ====== While Loop ========//
+
+        // let i = 0;
+        // while (i < fruits.length) {
+        //     console.log(fruits);
+        //     document.getElementById("output").innerHTML = fruits;
+        //     i++;
+        // }
+
+        // ====== For Loop ========//
+
+        // for (let i = 0; i < fruits.length; i++) {
+        //     console.log(fruits[i]);
+        //     document.getElementById("output").innerHTML += fruits[i] + "<br>";
+        // }
+
+        // ====== ForEach Loop ========//
+        fruits.forEach((x) => {
+            console.log(x);
+            document.getElementById("output").innerHTML = fruits;
+        });
+
+    </script>
+</body>
+
+</html>

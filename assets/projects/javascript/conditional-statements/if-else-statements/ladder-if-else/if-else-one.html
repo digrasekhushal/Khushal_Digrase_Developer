@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Deposit System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        text-align: center;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #display {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Bank Of India</h1>
+      <p>Choose a deposit option below:</p>
+      <button onclick="deposit(1)">Deposit 1000</button>
+      <button onclick="deposit(2)">Deposit 2000</button>
+      <button onclick="deposit(3)">Deposit 3000</button>
+      <br />
+      <button onclick="displayTotal()">View Total Amount</button>
+
+      <div id="display"></div>
+    </div>
+
+    <script>
+      let totalAmount = 0;
+
+      function deposit(amount) {
+        if (amount === 1) {
+          totalAmount += 1000;
+          alert("You have deposited 1000 in your bank account.");
+        } else if (amount === 2) {
+          totalAmount += 2000;
+          alert("You have deposited 2000 in your bank account.");
+        } else if (amount === 3) {
+          totalAmount += 3000;
+          alert("You have deposited 3000 in your bank account.");
+        }
+      }
+
+      function displayTotal() {
+        document.getElementById("display").innerHTML =
+          "Your total amount is: " + totalAmount;
+      }
+    </script>
+  </body>
+</html>

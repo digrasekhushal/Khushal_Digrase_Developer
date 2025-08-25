@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator UI</title>
+    <style>
+      body {
+        height: 100vh;
+        background: linear-gradient(to right, #eaf7c4, #f0e68e);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+      }
+
+      .main-container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .display {
+        margin-bottom: 20px;
+      }
+
+      #result {
+        font-size: 2em;
+        color: #333;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        margin: 10px 5px;
+        width: 150px;
+        font-size: 1em;
+      }
+
+      button {
+        padding: 15px 36px;
+        margin: 5px;
+        font-size: 1.2em;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="display">
+        <h1 id="result">Result:</h1>
+      </div>
+      <input type="text" id="inputOne" placeholder="Enter a number" />
+      <input type="text" id="inputTwo" placeholder="Enter another number" />
+      <br />
+      <button onclick="add('+')">+</button>
+      <button onclick="sub('-')">-</button>
+      <button onclick="mult('*')">*</button>
+      <button onclick="div('/')">/</button>
+    </div>
+    <script>
+      function getInputs() {
+        let inputOne = document.getElementById("inputOne").value;
+        let inputTwo = document.getElementById("inputTwo").value;
+        return [inputOne, inputTwo];
+      }
+
+      function displayResult(value) {
+        document.getElementById("result").textContent = "Result: " + value;
+      }
+
+      function add() {
+        const [a, b] = getInputs();
+        displayResult(a + b);
+      }
+
+      function sub() {
+        const [a, b] = getInputs();
+        displayResult(a - b);
+      }
+
+      function mult() {
+        const [a, b] = getInputs();
+        displayResult(a * b);
+      }
+
+      function div() {
+        const [a, b] = getInputs();
+        displayResult(a / b);
+      }
+    </script>
+  </body>
+</html>

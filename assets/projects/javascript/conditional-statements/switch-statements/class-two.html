@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Color Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+      }
+
+      body {
+        background: linear-gradient(to right, #e0f7fa, #80deea);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      button {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 24px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      button:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+      }
+
+      #display {
+        margin-top: 20px;
+        font-size: 1.5rem;
+        color: #2d2d2d;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="display">Check a fruit's color!</h1>
+    <button onclick="switchTwoExample()">Enter a Fruit</button>
+
+    <script>
+      function switchTwoExample() {
+        let fruit = prompt("Enter a fruit name:");
+        let display = "";
+
+        switch (fruit) {
+          case "apple":
+            display = "🍎 Apple is red";
+            break;
+          case "banana":
+            display = "🍌 Banana is yellow";
+            break;
+          case "orange":
+            display = "🍊 Orange is orange";
+            break;
+          case "grape":
+            display = "🍇 Grape is purple";
+            break;
+          case "mango":
+            display = "🥭 Mango is yellow";
+            break;
+          default:
+            display = "❌ Invalid fruit. Try again.";
+        }
+
+        document.getElementById("display").innerHTML = display;
+      }
+    </script>
+  </body>
+</html>

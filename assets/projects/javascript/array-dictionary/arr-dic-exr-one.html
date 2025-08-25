@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="result"></div>
+    <script>
+      const studentData = [
+        {
+          name: "Pranay",
+          age: 20,
+          marks: {
+            html: 90,
+            css: 80,
+            js: 70,
+          },
+        },
+        {
+          name: "Rohan",
+          age: 21,
+          marks: {
+            html: 85,
+            css: 75,
+            js: 65,
+          },
+        },
+        {
+          name: "Aryan",
+          age: 22,
+          marks: {
+            html: 95,
+            css: 85,
+            js: 75,
+          },
+        },
+        {
+          name: "Karan",
+          age: 23,
+          marks: {
+            html: 80,
+            css: 70,
+            js: 60,
+          },
+        },
+      ];
+
+      let result = "";
+
+      for (let i = 0; i < studentData.length; i++) {
+        result += `<h3>Student Name: ${studentData[i].name}</h3>`;
+        result += `<p>Age: ${studentData[i].age}</p>`;
+        result += `<p>HTML: ${studentData[i].marks.html}</p>`;
+        result += `<p>CSS: ${studentData[i].marks.css}</p>`;
+        result += `<p>JS: ${studentData[i].marks.js}</p>`;
+        result += `<hr>`;
+      }
+      document.getElementById("result").innerHTML = result;
+    </script>
+  </body>
+</html>

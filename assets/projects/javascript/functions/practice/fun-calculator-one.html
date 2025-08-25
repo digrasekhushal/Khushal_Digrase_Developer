@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+
+      .container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 100%;
+        max-width: 400px;
+      }
+
+      #display {
+        font-size: 2em;
+        margin-bottom: 10px;
+        text-align: right;
+        padding: 10px;
+        background-color: #f1f1f1;
+        border-radius: 4px;
+      }
+
+      input {
+        width: 350px;
+        padding: 12px;
+        font-size: 1em;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+      }
+
+      .btn {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      .btn button {
+        padding: 10px;
+        font-size: 1em;
+        background-color: #65b1ef;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .btn button:hover {
+        background-color: #46a3ef;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main container -->
+    <div class="main-container">
+      <!-- container -->
+      <div class="container">
+        <!-- display -->
+        <div id="display"></div>
+        <!-- input inputValueOne -->
+        <input
+          type="number"
+          id="inputValueOne"
+          placeholder="Enter your first value"
+        />
+        <!-- input inputValueTwo -->
+        <input
+          type="number"
+          id="inputValueTwo"
+          placeholder="Enter your second value"
+        />
+        <!-- btn -->
+        <div class="btn">
+          <!-- addValue button -->
+          <button onclick="addValue()">+</button>
+          <!-- subValue button -->
+          <button onclick="subValue()">-</button>
+          <!-- multValue button -->
+          <button onclick="multValue()">*</button>
+          <!-- divideValue button -->
+          <button onclick="divideValue()">/</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      // inputValues Function used for gets values from front page
+      function inputValues() {
+        let inputOne = document.getElementById("inputValueOne").value;
+        let inputTwo = document.getElementById("inputValueTwo").value;
+        // input dictionary used for store the values in keys, return the input
+        let input = {
+          a: inputOne,
+          b: inputTwo,
+        };
+        return input;
+      }
+
+      // function used for add the value of inputOne & inputTwo
+      function addValue() {
+        let input = inputValues();
+        let sum = Number(input.a) + Number(input.b);
+        document.getElementById("display").innerHTML = sum;
+      }
+      // function used for sub the value of inputOne & inputTwo
+      function subValue() {
+        let input = inputValues();
+        let sub = Number(input.a) - Number(input.b);
+        document.getElementById("display").innerHTML = sub;
+      }
+      // function used for mult the value of inputOne & inputTwo
+      function multValue() {
+        let input = inputValues();
+        let mult = Number(input.a) * Number(input.b);
+        document.getElementById("display").innerHTML = mult;
+      }
+
+      // function used for div the value of inputOne & inputTwo
+      function divideValue() {
+        let input = inputValues();
+        let div = Number(input.a) / Number(input.b);
+        document.getElementById("display").innerHTML = div;
+      }
+    </script>
+  </body>
+</html>

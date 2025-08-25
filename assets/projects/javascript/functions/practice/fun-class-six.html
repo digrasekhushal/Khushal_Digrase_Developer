@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Numbers Generated</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .main-container{
+            text-align: center;
+            background-color: white;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h3{
+            color: #333;
+            margin-bottom: 20px;
+        }
+        button{
+            background-color: #fa5a9d;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover{
+            background-color: #d43f7a;
+        }
+        #display{
+            margin-top: 20px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <h3>Multiply Numbers With generate the Random Numbers</h3>
+      <p id="display"></p>
+      <button onclick="getMultiplyNumbers()">Multiply Numbers</button>
+      <button onclick="getRandomNumbers()">Random Numbers</button>
+    </div>
+    <script>
+      function getMultiplyNumbers() {
+        let a = Math.random() * 1;
+        let b = Math.random() * 1;
+        let result = a * b;
+        document.getElementById("display").innerHTML =
+          "The result of " + a + " * " + b + " = " + result;
+        alert("The result of " + a + " * " + b + " = " + result);
+      }
+
+      function getRandomNumbers() {
+        let a = Math.random() * 1;
+        let b = Math.random() * 1;
+        let result = a + b;
+        document.getElementById("display").innerHTML =
+          "The result of " + a + " + " + b + " = " + result;
+        alert("The result of " + a + " + " + b + " = " + result);
+      }
+    </script>
+  </body>
+</html>

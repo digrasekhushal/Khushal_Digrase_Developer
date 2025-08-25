@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="display"></h1>
+    <script>
+      // This is a program of incriment value
+      function incriment(number) {
+        if (number >= 10) {
+          document.getElementById("display").innerHTML = 0;
+          console.log("end");
+        } else {
+          document.getElementById("display").innerHTML = number;
+          console.log(number);
+          incriment(number + 1);
+        }
+        return 0;
+      }
+      let output = incriment(0);
+      console.log(output);
+      document.getElementById("display").innerHTML = output;
+      alert(output);
+
+      // This is a program of decriment value
+      function decriment(number) {
+        if (number <= 10) {
+          document.getElementById("display").innerHTML = 0;
+          console.log("end");
+        } else {
+          document.getElementById("display").innerHTML = number;
+          console.log(number);
+          decriment(number + 1);
+        }
+        return 0;
+      }
+      let output2 = decriment(0);
+      console.log(output2);
+      document.getElementById("display").innerHTML = output2;
+      alert(output2);
+
+      // fun for incriment numbers
+      function incrimentNumber(start, end) {
+        if (start <= end) {
+          document.getElementById("display").innerHTML += start + ", ";
+          console.log(start);
+          incrimentNumber(start + 1, end);
+        } else {
+          console.log("end");
+        }
+        return 0;
+      }
+      let output3 = incrimentNumber(1, 10);
+      console.log(output3);
+    </script>
+  </body>
+</html>

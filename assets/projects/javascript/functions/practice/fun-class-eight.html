@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Marks</title>
+    <style>
+      /* Reset default styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f4f7fc;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .input-section,
+      .output-section {
+        margin-bottom: 30px;
+      }
+
+      .input-section input,
+      .input-section button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+      }
+
+      .input-section button {
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .input-section button:hover {
+        background-color: #45a049;
+      }
+
+      .output-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .output-section .student-mark {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .output-section .student-mark h2 {
+        color: #333;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .output-section .student-mark p {
+        color: #555;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Student Marks</h1>
+      <div class="input-section">
+        <label for="student-name">Student Name:</label>
+        <input type="text" id="student-name" placeholder="Enter student name" />
+
+        <label for="html">HTML Marks:</label>
+        <input type="number" id="html" placeholder="Enter HTML marks" />
+
+        <label for="css">CSS Marks:</label>
+        <input type="number" id="css" placeholder="Enter CSS marks" />
+
+        <label for="js">JS Marks:</label>
+        <input type="number" id="js" placeholder="Enter JS marks" />
+
+        <label for="testing">Testing Marks:</label>
+        <input type="number" id="testing" placeholder="Enter Testing marks" />
+
+        <label for="sql">SQL Marks:</label>
+        <input type="number" id="sql" placeholder="Enter SQL marks" />
+
+        <button onclick="addMarks()">Add Marks</button>
+      </div>
+
+      <div class="output-section" id="data-container">
+        <!-- Data will be displayed here -->
+      </div>
+    </div>
+
+    <script>
+      let studentMarks = [];
+
+      function addMarks() {
+        let studentName = document.getElementById("student-name").value;
+        let htmlMarks = Number(document.getElementById("html").value);
+        let cssMarks = Number(document.getElementById("css").value);
+        let jsMarks = Number(document.getElementById("js").value);
+        let testingMarks = Number(document.getElementById("testing").value);
+        let sqlMarks = Number(document.getElementById("sql").value);
+
+        studentMarks.push({
+          student_name: studentName,
+          html_marks: htmlMarks,
+          css_marks: cssMarks,
+          js_marks: jsMarks,
+          testing_marks: testingMarks,
+          sql_marks: sqlMarks,
+        });
+
+        document.getElementById("student-name").value = "";
+        document.getElementById("html").value = "";
+        document.getElementById("css").value = "";
+        document.getElementById("js").value = "";
+        document.getElementById("testing").value = "";
+        document.getElementById("sql").value = "";
+
+        displayMarks();
+      }
+
+      function displayMarks() {
+        let result = "";
+        for (let i = 0; i < studentMarks.length; i++) {
+          result += `
+            <div class="student-mark">
+              <h2>${studentMarks[i].student_name}</h2>
+              <p><strong>HTML:</strong> ${studentMarks[i].html_marks}</p>
+              <p><strong>CSS:</strong> ${studentMarks[i].css_marks}</p>
+              <p><strong>JS:</strong> ${studentMarks[i].js_marks}</p>
+              <p><strong>Testing:</strong> ${studentMarks[i].testing_marks}</p>
+              <p><strong>SQL:</strong> ${studentMarks[i].sql_marks}</p>
+            </div>
+          `;
+        }
+        document.getElementById("data-container").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

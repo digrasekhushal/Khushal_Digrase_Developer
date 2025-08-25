@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Selector</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #74ebd5, #acb6e5);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      header {
+        background: linear-gradient(to right, #ffffff, #f0f0f0);
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 25px;
+        font-size: 28px;
+        color: #2c3e50;
+      }
+
+      .language-selector {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+      }
+
+      label {
+        font-weight: 600;
+        color: #333;
+        font-size: 16px;
+        text-align: left;
+      }
+
+      select {
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        background-color: #fff;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      select:focus {
+        border-color: #5e60ce;
+        box-shadow: 0 0 0 4px rgba(94, 96, 206, 0.2);
+        outline: none;
+      }
+
+      select:hover {
+        cursor: pointer;
+        border-color: #5e60ce;
+      }
+
+      button {
+        padding: 12px;
+        font-size: 16px;
+        background-color: #5e60ce;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #4a4ecb;
+      }
+
+      #display {
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #2c3e50;
+        min-height: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🌍 Language Selector</h1>
+      <div class="language-selector">
+        <label for="language-select">Choose your preferred language:</label>
+        <select id="language-select" name="language">
+          <option value="en">English</option>
+          <option value="hi">Hindi</option>
+          <option value="mr">Marathi</option>
+          <option value="es">Spanish</option>
+        </select>
+        <button onclick="showLanguage()">Show Greeting</button>
+        <p id="display"></p>
+      </div>
+    </header>
+
+    <script>
+      function showLanguage() {
+        const selectedLanguage =
+          document.getElementById("language-select").value;
+        let greeting = "";
+
+        switch (selectedLanguage) {
+          case "en": // English
+            greeting = "Hello!";
+            break;
+          case "hi": // Hindi
+            greeting = "नमस्ते!";
+            break;
+          case "mr": // Marathi
+            greeting = "नमस्कार!";
+            break;
+          case "es": // Spanish
+            greeting = "¡Hola!";
+            break;
+          default:
+            greeting = "Hello!";
+        }
+
+        document.getElementById("display").textContent = greeting;
+      }
+    </script>
+  </body>
+</html>
