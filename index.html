@@ -313,22 +313,14 @@
         <button class="tab" onclick="filterProjects('bootstrap', this)">
           <i class="fab fa-bootstrap"></i> Bootstrap
         </button>
-
-        <!-- <button class="tab" onclick="filterProjects('vue', this)">
-          <i class="fab fa-vuejs"></i> Vue
-        </button>
-
-        <button class="tab" onclick="filterProjects('node', this)">
-          <i class="fab fa-node-js"></i> Node
-        </button>
-        <button class="tab" onclick="filterProjects('sql', this)">
-          <i class="fas fa-database"></i> SQL
-        </button> -->
         <button class="tab" onclick="filterProjects('testcases', this)">
           <i class="fas fa-clipboard-check"></i> Test Cases
         </button>
         <button class="tab" onclick="filterProjects('design', this)">
           <i class="fas fa-pencil-ruler"></i> Design
+        </button>
+        <button class="tab" onclick="filterProjects('liveproject', this)">
+          <i class="fas fa-play-circle"></i> Live Project
         </button>
       </div>
 
@@ -389,31 +381,11 @@
           <h2>React JS Project</h2>
           <p>Modern single-page app showcasing dynamic UI via React.</p>
         </a>
-
-        <!-- <a href="#" class="project-box vue">
-          <i class="fab fa-vuejs"></i>
-          <h2>Vue JS Project</h2>
-          <p>
-            Reactive front-end using Vue.js components and state management.
-          </p>
-        </a>
-
-        <a href="#" class="project-box node">
-          <i class="fab fa-node-js"></i>
-          <h2>Node JS Project</h2>
-          <p>
-            Server-side logic, APIs and backend logic using Node.js & Express.
-          </p>
-        </a>
-
-        <a href="#" class="project-box sql">
-          <i class="fas fa-database"></i>
-          <h2>SQL Project</h2>
-          <p>
-            Working with MySQL/PostgreSQL to store and query data efficiently.
-          </p>
-        </a> -->
-        <a href="./assets/Projects/Project_Design.html" class="project-box design">
+        <!-- Design Project Card -->
+        <a
+          href="./assets/Projects/Project_Design.html"
+          class="project-box design"
+        >
           <i class="fas fa-pencil-ruler"></i>
           <h2>Design Project</h2>
           <p>
@@ -421,8 +393,22 @@
             and modern design systems.
           </p>
         </a>
+        <!-- Live Projects Card -->
+        <a
+          href="./assets/Projects/Project_Live.html"
+          class="project-box liveproject"
+          aria-label="View Live Project"
+        >
+          <i class="fas fa-play-circle" aria-hidden="true"></i>
+          <h2>Live Project</h2>
+          <p>
+            Explore ongoing UI/UX design projects, actively crafted using tools
+            like Figma, Adobe XD, and other industry-standard design systems.
+          </p>
+        </a>
+
+        <!-- add more cards -->
       </div>
-      <!-- Project Cards End -->
     </section>
     <!-- Project Section End -->
     <!-- Contact Section Start -->
@@ -506,25 +492,19 @@
           </div>
         </div>
 
-        <!-- Contact Form -->
-        <div class="contact-form">
-          <h3>Contact Form</h3>
-          <form action="#">
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="6"
-              required
-            ></textarea>
-            <button type="submit">Send Message</button>
-          </form>
+        <div class="map-container">
+          <h3 class="section-title">Our Location</h3>
+          <div class="google-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3715.52879742902!2d78.44997717504134!3d21.36907368036677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd44d84db27f52d%3A0xe80af9c1d521221f!2sKhushal%20home!5e0!3m2!1sen!2sin!4v1755066278460!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
