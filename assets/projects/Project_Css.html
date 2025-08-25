@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags for character encoding and responsiveness -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Project</title>
+
+    <style>
+      /* Reset some default styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* General styling for the body */
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+      }
+
+      /* Header styling */
+      header {
+        background-color: #333;
+        color: white;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      /* Header text styling */
+      header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        text-align: center;
+        flex-grow: 1;
+      }
+
+      /* Back button styling */
+      .back-button {
+        color: white;
+        text-decoration: none;
+      }
+
+      /* Section holding all the project cards */
+      .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      /* Styling for individual project cards */
+      .project-card {
+        background-color: white;
+        width: 250px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        padding: 1rem;
+        transition: transform 0.3s ease;
+      }
+
+      /* Styling for the images in project cards */
+      .project-card img {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      /* Project title styling */
+      .project-card h3 {
+        margin: 1rem 0;
+        font-size: 1.5rem;
+      }
+
+      /* Description text styling */
+      .project-card p {
+        margin-bottom: 1rem;
+        color: #555;
+      }
+
+      /* Styling for the link/button inside each project card */
+      .project-card a {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background-color: #333;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+
+      /* Hover effect for the link/button */
+      .project-card a:hover {
+        background-color: #555;
+      }
+
+      /* Footer styling */
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      /* Footer text styling */
+      footer p {
+        font-size: 1rem;
+      }
+
+      /* Responsive Styles */
+      /* Medium screens (tablets) */
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
+
+        .projects {
+          gap: 1.5rem;
+        }
+
+        .project-card {
+          width: 200px;
+        }
+      }
+
+      /* Small screens (mobile) */
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.8rem;
+        }
+
+        .projects {
+          gap: 1rem;
+        }
+
+        .project-card {
+          width: 180px;
+          padding: 0.8rem;
+        }
+
+        .project-card h3 {
+          font-size: 1.2rem;
+        }
+
+        .project-card a {
+          font-size: 0.9rem;
+        }
+      }
+
+      /* Extra small screens (very small mobile) */
+      @media (max-width: 320px) {
+        .project-card {
+          width: 150px;
+          padding: 0.6rem;
+        }
+
+        .project-card h3 {
+          font-size: 1rem;
+        }
+
+        .project-card a {
+          font-size: 0.8rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header section with a back button and page title -->
+    <header>
+      <a href="javascript:history.back()" class="back-button"> Back</a>
+      <h1>CSS Projects</h1>
+    </header>
+
+    <!-- Main section with project cards -->
+    <section class="projects">
+      <!-- Project Card 1 -->
+      <div class="project-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgDcSAjEY7fzwR_ys7YTLzAXZA6HpmOIuWUw&s"
+          alt="Project 3"
+        />
+        <h3>Indian Flag</h3>
+        <a href="../Projects/Flexs/flag.html">View Project</a>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="project-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgDcSAjEY7fzwR_ys7YTLzAXZA6HpmOIuWUw&s"
+          alt="Project 3"
+        />
+        <h3>Flex Layout One</h3>
+        <a href="../Projects/Flexs/flex.html">View Project</a>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="project-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgDcSAjEY7fzwR_ys7YTLzAXZA6HpmOIuWUw&s"
+          alt="Project 3"
+        />
+        <h3>Flex Layout Two</h3>
+        <a href="../Projects/Flexs/flex-one.html">View Project</a>
+      </div>
+
+      <!-- Project Card 4 -->
+      <div class="project-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgDcSAjEY7fzwR_ys7YTLzAXZA6HpmOIuWUw&s"
+          alt="Project 3"
+        />
+        <h3>Flex Layout Three</h3>
+        <a href="../Projects/Flexs/flex_two.html">View Project</a>
+      </div>
+    </section>
+
+    <!-- Second Section with more project cards -->
+    <section class="projects">
+      <!-- Project Card 5 -->
+      <div class="project-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgDcSAjEY7fzwR_ys7YTLzAXZA6HpmOIuWUw&s"
+          alt="Project 3"
+        />
+        <h3>Flex Layout Four</h3>
+        <a href="../Projects/Flexs/flexthree.html">View Project</a>
+      </div>
+
+      <!-- Project Card 6 -->
+      <div class="project-card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgDcSAjEY7fzwR_ys7YTLzAXZA6HpmOIuWUw&s"
+          alt="Project 3"
+        />
+        <h3>Flex Layout Five</h3>
+        <a href="../Projects/Flexs/flex_nine.html">View Project</a>
+      </div>
+
+      <!-- Project Card 7 -->
+      <div class="project-card">
+        <img
+          src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif"
+          alt="Project 3"
+        />
+        <h3>Comming Soon</h3>
+        <a href="#">View Project</a>
+      </div>
+
+      <!-- Project Card 8 -->
+      <div class="project-card">
+        <img
+          src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif"
+          alt="Project 3"
+        />
+        <h3>Comming Soon</h3>
+        <a href="#">View Project</a>
+      </div>
+      <!-- Project Card 9 -->
+      <div class="project-card">
+        <img
+          src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkXnpL%2FbtqvJ6p17KS%2Fx1d3aBXxFufFKDCV3oSxI0%2Fimg.png"
+          alt="Project 3"
+        />
+        <h3>Chess</h3>
+        <a href="../Projects/Grids/chess.html">View Project</a>
+      </div>
+
+      <!-- Project Card 10 -->
+      <div class="project-card">
+        <img
+          src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkXnpL%2FbtqvJ6p17KS%2Fx1d3aBXxFufFKDCV3oSxI0%2Fimg.png"
+          alt="Project 3"
+        />
+        <h3>Web Layout</h3>
+        <a href="../Projects/Grids/grid-layout-one.html">View Project</a>
+      </div>
+
+      <!-- Project Card 11 -->
+      <div class="project-card">
+        <img
+          src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkXnpL%2FbtqvJ6p17KS%2Fx1d3aBXxFufFKDCV3oSxI0%2Fimg.png"
+          alt="Project 3"
+        />
+        <h3>Layout 1</h3>
+        <a href="../Projects/Grids/Grid_One.html">View Project</a>
+      </div>
+      <!-- Project Card 12 -->
+      <div class="project-card">
+        <img
+          src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkXnpL%2FbtqvJ6p17KS%2Fx1d3aBXxFufFKDCV3oSxI0%2Fimg.png"
+          alt="Project 3"
+        />
+        <h3>Layout 2</h3>
+        <a href="../Projects/Grids/Grid_Two.html">View Project</a>
+      </div>
+      <!-- Project Card 13 -->
+      <div class="project-card">
+        <img
+          src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkXnpL%2FbtqvJ6p17KS%2Fx1d3aBXxFufFKDCV3oSxI0%2Fimg.png"
+          alt="Project 3"
+        />
+        <h3>Layout 3</h3>
+        <a href="../Projects/Grids/grid-area-two.html">View Project</a>
+      </div>
+
+      <!-- Project Card 14 -->
+      <div class="project-card">
+        <img
+          src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkXnpL%2FbtqvJ6p17KS%2Fx1d3aBXxFufFKDCV3oSxI0%2Fimg.png"
+          alt="Project 3"
+        />
+        <h3>Layout 4</h3>
+        <a href="../Projects/Grids/grid-colspan-one.html">View Project</a>
+      </div>
+
+      <!-- Project Card 15 -->
+      <div class="project-card">
+        <img
+          src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkXnpL%2FbtqvJ6p17KS%2Fx1d3aBXxFufFKDCV3oSxI0%2Fimg.png"
+          alt="Project 3"
+        />
+        <h3>Layout 5</h3>
+        <a href="../Projects/Grids/grid-rowspan-one.html">View Project</a>
+      </div>
+
+      <!-- Project Card 16 -->
+      <div class="project-card">
+        <img
+          src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkXnpL%2FbtqvJ6p17KS%2Fx1d3aBXxFufFKDCV3oSxI0%2Fimg.png"
+          alt="Project 3"
+        />
+        <h3>Layout 6</h3>
+        <a href="../Projects/Grids/grid-netwok.html">View Project</a>
+      </div>
+
+      <!-- Project Card 17 -->
+      <div class="project-card">
+        <img
+          src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif"
+          alt="Project 3"
+        />
+        <h3>Comming Soon</h3>
+        <a href="#">View Project</a>
+      </div>
+
+      <!-- Project Card 18 -->
+      <div class="project-card">
+        <img
+          src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif"
+          alt="Project 3"
+        />
+        <h3>Comming Soon</h3>
+        <a href="#">View Project</a>
+      </div>
+
+      <!-- Project Card 19 -->
+      <div class="project-card">
+        <img
+          src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif"
+          alt="Project 3"
+        />
+        <h3>Comming Soon</h3>
+        <a href="#">View Project</a>
+      </div>
+
+      <!-- Project Card 20 -->
+      <div class="project-card">
+        <img
+          src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif"
+          alt="Project 3"
+        />
+        <h3>Comming Soon</h3>
+        <a href="#">View Project</a>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+      <p>&copy; 2025 My Company</p>
+    </footer>
+  </body>
+</html>
