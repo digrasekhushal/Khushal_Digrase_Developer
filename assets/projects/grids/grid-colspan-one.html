@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Span</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .grid-container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .box-one {
+            width: 100%;
+            height: 100%;
+            grid-column: 1 / 3;
+            background-color: #a2d5f2;
+        }
+
+        .box-two {
+            width: 100%;
+            height: 100%;
+            grid-column: 3 / 4;
+            background-color: #077b8a;
+        }
+
+        .box-three {
+            width: 100%;
+            height: 100%;
+            background-color: #70a1a1;
+        }
+
+        .box-four {
+            width: 100%;
+            height: 100%;
+            grid-column: 2 / span 2;
+            background-color: #fcd1d1;
+        }
+
+        .box-five {
+            width: 100%;
+            height: 100%;
+            grid-column: 1 / span 3;
+            background-color: #ffe0ac;
+        }
+
+        .box-six {
+            width: 100%;
+            height: 100%;
+            grid-column: 1 / span 2;
+            background-color: #ff6b6b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="box-one"></div>
+        <div class="box-two"></div>
+        <div class="box-three"></div>
+        <div class="box-four"></div>
+        <div class="box-five"></div>
+        <div class="box-six"></div>
+    </div>
+</body>
+
+</html>
